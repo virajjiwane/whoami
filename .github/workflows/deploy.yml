@@ -6,6 +6,12 @@ on:
       - main  # Set this to your default branch
   workflow_dispatch:
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,5 +30,9 @@ jobs:
         run: npm run github-build
 
       - name: Deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "vjiwane27@gmail.com"
           npm run github-deploy -- --name="GitHub Actions" --email=vjiwane27@gmail.com
