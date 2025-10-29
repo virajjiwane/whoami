@@ -1,0 +1,11 @@
+
+/* @use 'tailwind.config';
+@use 'tailwindcss'; */
+
+@use 'tailwind.config';
+
+
+/* base page styles using brand palette */
+body {
+  @apply bg-primary text-white font-geist;
+}
