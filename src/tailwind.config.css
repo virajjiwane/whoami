@@ -1,119 +1,119 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'Geist';
-  font-display: swap;
-  src: url('/assets/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
+    font-family: 'Geist';
+    font-display: swap;
+    src: url('/assets/fonts/Geist/Geist-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-stretch: 75% 125%;
 }
 
 @theme {
-  --color-primary: #11181e;
-  --color-lavender: #b5a9c8;
-  --color-indigo: #5155c3;
-  --color-teal: #3e9e98;
-  --color-plum: #4d436f;
-  --color-mulberry: #55344d;
+    --color-primary: #11181e;
+    --color-lavender: #b5a9c8;
+    --color-indigo: #5155c3;
+    --color-teal: #3e9e98;
+    --color-plum: #4d436f;
+    --color-mulberry: #55344d;
 
-  --font-geist: 'Geist', sans-serif;
+    --font-geist: 'Geist', sans-serif;
 }
 
 @keyframes fade-in-up-bounce {
-  0% {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-0.5rem);
-  }
-  80% {
-    transform: translateY(0.25rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(2rem);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-0.5rem);
+    }
+    80% {
+        transform: translateY(0.25rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in-up-bounce {
-  animation: fade-in-up-bounce 1s ease-in-out forwards;
-  animation-delay: 100ms;
+    animation: fade-in-up-bounce 1s ease-in-out forwards;
+    animation-delay: 100ms;
 }
 
 @keyframes fade-in-scale-up {
-  0% {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .animate-fade-in-scale-up {
-  animation: fade-in-scale-up 1s ease-in-out forwards;
-  animation-delay: 500ms;
+    animation: fade-in-scale-up 1s ease-in-out forwards;
+    animation-delay: 500ms;
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(10deg);
-  }
-  to {
-    transform: translateY(0) rotate(0deg);
-  }
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+    to {
+        transform: translateY(0) rotate(0deg);
+    }
 }
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+    animation: float 6s ease-in-out infinite;
 }
 .animate-pulse-slow {
-  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 @keyframes pulse {
-  0%,
-  to {
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.3;
-  }
+    0%,
+    to {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.3;
+    }
 }
 @keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in {
-  animation: fade-in 0.5s ease-out forwards;
-  animation-delay: 500ms;
+    animation: fade-in 0.5s ease-out forwards;
+    animation-delay: 500ms;
 }
 
 @keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.5s ease-out forwards;
-  animation-delay: 500ms;
+    animation: fade-in-up 0.5s ease-out forwards;
+    animation-delay: 500ms;
 }

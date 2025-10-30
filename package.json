@@ -8,11 +8,17 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "github-build": "ng build --configuration production --base-href 'https://github.com/virajjiwane/whoami/'",
-    "github-deploy": "npx angular-cli-ghpages --dir=dist/whoami/browser --no-silent"
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/whoami/browser --no-silent",
+    "prettier": "prettier --write \"src/**/*.{ts,css,js,json,md,scss,html}\""
   },
   "prettier": {
     "printWidth": 100,
+    "tabWidth": 4,
     "singleQuote": true,
+    "bracketSpacing": true,
+    "bracketSameLine": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "endOfLine": "crlf",
     "overrides": [
       {
         "files": "*.html",
@@ -49,6 +55,7 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.16",
-    "typescript": "~5.9.2"
+    "typescript": "~5.9.2",
+    "prettier": "^3.0.0"
   }
 }
