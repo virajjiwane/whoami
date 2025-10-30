@@ -528,9 +528,11 @@
             class="text-3xl font-bold mb-16 text-center opacity-0"
             [appIntersection]
             (viewChange)="handleViewChange($event, 'animate-fade-in-up')">
-            Full Stack Projects
+            My Work
         </h2>
+
         <div class="space-y-16">
+            <!-- Project: Org-Culture Analytics (Euracle) -->
             <div
                 class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0"
                 [appIntersection]
@@ -540,49 +542,192 @@
                         <div class="space-y-6">
                             <div>
                                 <h3 class="text-2xl font-bold mb-4">
-                                    Enterprise E-commerce Platform
+                                    Org-Culture Analytics Pipeline | Euracle
                                 </h3>
                                 <p class="text-gray-400">
-                                    A high-performance e-commerce solution handling 100K+ daily
-                                    transactions with real-time inventory and ML-powered
-                                    recommendations.
+                                    Scalable analytics pipeline for org-culture insights. Processed
+                                    large corp datasets and produced GDPR-safe dashboards used by
+                                    5k+ C-Suite executives across multiple organizations.
                                 </p>
                             </div>
+
                             <div class="grid grid-cols-2 gap-6">
                                 <div>
                                     <h4 class="text-sm font-semibold text-blue-400 mb-3">
-                                        Frontend Architecture
+                                        Frontend & UX
                                     </h4>
                                     <ul class="space-y-2 text-sm text-gray-400">
-                                        <li>• Next.js Server Components</li>
-                                        <li>• Real-time Cart &amp; Inventory</li>
-                                        <li>• Stripe Payment Integration</li>
-                                        <li>• PWA with Offline Support</li>
+                                        <li>• PHP + Vanilla HTML CSS JS dashboards</li>
+                                        <li>• Interactive filters, PDF and CSV exports</li>
+                                        <li>• GDPR consent flows and masking</li>
+                                        <li>• Role-based access controls</li>
                                     </ul>
                                 </div>
+
                                 <div>
                                     <h4 class="text-sm font-semibold text-purple-400 mb-3">
-                                        Backend Systems
+                                        Backend & ML
                                     </h4>
                                     <ul class="space-y-2 text-sm text-gray-400">
-                                        <li>• Node.js Microservices</li>
-                                        <li>• Redis Caching Layer</li>
-                                        <li>• Kafka Event Streaming</li>
-                                        <li>• Elasticsearch Product Search</li>
+                                        <li>• Python ETL pipelines</li>
+                                        <li>• Sentence-transformers for semantic analysis</li>
+                                        <li>• Multiprocessing and async workers</li>
+                                        <li>• MySQL + Azure Suite</li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="space-y-3">
                                 <h4 class="text-sm font-semibold text-teal-400">
                                     Key Achievements
                                 </h4>
                                 <ul class="space-y-2 text-sm text-gray-400">
-                                    <li>• 99.99% Uptime with Blue-Green Deployment</li>
-                                    <li>• 300ms Average API Response Time</li>
-                                    <li>• 45% Reduction in Infrastructure Costs</li>
+                                    <li>• 85% improvement in pipeline throughput</li>
+                                    <li>• GDPR-compliant reporting across EU clients</li>
+                                    <li>• Reduced manual data-prep by automations</li>
                                 </ul>
                             </div>
                         </div>
+
+                        <div class="bg-black/30 rounded-xl p-6">
+                            <h4 class="text-sm font-semibold text-gray-400 mb-4">
+                                System Architecture
+                            </h4>
+                            <div class="aspect-4/3 bg-black/50 rounded-lg p-4">
+                                <!-- simplified diagram -->
+                                <svg class="w-full h-full" viewBox="0 0 400 300">
+                                    <g>
+                                        <rect
+                                            x="20"
+                                            y="20"
+                                            width="360"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-blue-500/20 stroke-blue-500"
+                                            stroke-width="1"></rect>
+                                        <text
+                                            x="200"
+                                            y="45"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Ingest (S3 / APIs)
+                                        </text>
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="20"
+                                            y="80"
+                                            width="170"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1"></rect>
+                                        <rect
+                                            x="210"
+                                            y="80"
+                                            width="170"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1"></rect>
+                                        <text
+                                            x="105"
+                                            y="105"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            ETL Workers
+                                        </text>
+                                        <text
+                                            x="295"
+                                            y="105"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            NLP Models
+                                        </text>
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="20"
+                                            y="150"
+                                            width="360"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1"></rect>
+                                        <text
+                                            x="200"
+                                            y="175"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Postgres + Redis + Dashboards
+                                        </text>
+                                    </g>
+                                    <g class="stroke-gray-600" stroke-width="1">
+                                        <line x1="200" y1="60" x2="200" y2="80"></line>
+                                        <line x1="200" y1="120" x2="200" y2="150"></line>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project: Lending Microservices (LenDenClub) -->
+            <div
+                class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0"
+                [appIntersection]
+                (viewChange)="handleViewChange($event, 'animate-fade-in-up')">
+                <div class="p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-4">
+                                    Microservices Lending Platform | LenDenClub
+                                </h3>
+                                <p class="text-gray-400">
+                                    Led microservices redesign for loan disbursal and underwriting.
+                                    Focus on reliability, idempotency and automation for high-volume
+                                    disbursal workflows.
+                                </p>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="text-sm font-semibold text-blue-400 mb-3">
+                                        Frontend
+                                    </h4>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                        <li>• Admin portals (Angular)</li>
+                                        <li>• Loan origination flows</li>
+                                        <li>• Notifications & audit trails</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-sm font-semibold text-purple-400 mb-3">
+                                        Backend
+                                    </h4>
+                                    <ul class="space-y-2 text-sm text-gray-400">
+                                        <li>• Django microservices</li>
+                                        <li>• Celery workers and RabbitMQ</li>
+                                        <li>• Postgres, Redis, and background reconciliation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                <h4 class="text-sm font-semibold text-teal-400">
+                                    Key Achievements
+                                </h4>
+                                <ul class="space-y-2 text-sm text-gray-400">
+                                    <li>• Reduced disbursal time by 98%</li>
+                                    <li>• Automated flows reduced support tickets by 57%</li>
+                                    <li>• Mentored 6 engineers during rollout</li>
+                                </ul>
+                            </div>
+                        </div>
+
                         <div class="bg-black/30 rounded-xl p-6">
                             <h4 class="text-sm font-semibold text-gray-400 mb-4">
                                 System Architecture
@@ -603,45 +748,60 @@
                                             y="45"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Next.js Frontend (SSR + Client Components)
+                                            API Gateway (Auth, Rate-limit)
                                         </text>
                                     </g>
                                     <g>
                                         <rect
                                             x="20"
-                                            y="80"
-                                            width="170"
+                                            y="90"
+                                            width="110"
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
                                             stroke-width="1"></rect>
                                         <rect
-                                            x="210"
-                                            y="80"
-                                            width="170"
+                                            x="145"
+                                            y="90"
+                                            width="110"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1"></rect>
+                                        <rect
+                                            x="270"
+                                            y="90"
+                                            width="110"
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
                                             stroke-width="1"></rect>
                                         <text
-                                            x="105"
-                                            y="105"
+                                            x="75"
+                                            y="115"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Product Service
+                                            Origination
                                         </text>
                                         <text
-                                            x="295"
-                                            y="105"
+                                            x="200"
+                                            y="115"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Order Service
+                                            Underwriting
+                                        </text>
+                                        <text
+                                            x="325"
+                                            y="115"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Disbursal
                                         </text>
                                     </g>
                                     <g>
                                         <rect
                                             x="20"
-                                            y="140"
+                                            y="180"
                                             width="360"
                                             height="30"
                                             rx="4"
@@ -649,68 +809,16 @@
                                             stroke-width="1"></rect>
                                         <text
                                             x="200"
-                                            y="160"
+                                            y="200"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Redis Cache Layer
-                                        </text>
-                                    </g>
-                                    <g>
-                                        <rect
-                                            x="20"
-                                            y="190"
-                                            width="170"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
-                                        <rect
-                                            x="210"
-                                            y="190"
-                                            width="170"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="105"
-                                            y="215"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Product DB (PostgreSQL)
-                                        </text>
-                                        <text
-                                            x="295"
-                                            y="215"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Order DB (MongoDB)
-                                        </text>
-                                    </g>
-                                    <g>
-                                        <rect
-                                            x="20"
-                                            y="250"
-                                            width="360"
-                                            height="30"
-                                            rx="4"
-                                            class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="200"
-                                            y="270"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Elasticsearch Product Search
+                                            Postgres + Reconciliation Workers
                                         </text>
                                     </g>
                                     <g class="stroke-gray-600" stroke-width="1">
-                                        <line x1="200" y1="60" x2="200" y2="80"></line>
-                                        <line x1="105" y1="120" x2="105" y2="140"></line>
-                                        <line x1="295" y1="120" x2="295" y2="140"></line>
-                                        <line x1="105" y1="170" x2="105" y2="190"></line>
-                                        <line x1="295" y1="170" x2="295" y2="190"></line>
-                                        <line x1="200" y1="230" x2="200" y2="250"></line>
+                                        <line x1="75" y1="130" x2="75" y2="180"></line>
+                                        <line x1="200" y1="130" x2="200" y2="180"></line>
+                                        <line x1="325" y1="130" x2="325" y2="180"></line>
                                     </g>
                                 </svg>
                             </div>
@@ -718,6 +826,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Project: SILI Tool (Patent + Hackathon) -->
             <div
                 class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0"
                 [appIntersection]
@@ -727,207 +837,111 @@
                         <div class="space-y-6">
                             <div>
                                 <h3 class="text-2xl font-bold mb-4">
-                                    Real-time Analytics Platform
+                                    SILI Tool — Smart Inline Inspection Tool (Patent)
                                 </h3>
                                 <p class="text-gray-400">
-                                    A scalable analytics platform processing 1M+ events per minute
-                                    with real-time dashboards and ML-powered insights.
+                                    ML + IoT system for wax-deposition prediction on pipelines. Won
+                                    hackathon and granted patent in 2024. Includes sensor
+                                    integration and predictive dashboard.
                                 </p>
                             </div>
+
                             <div class="grid grid-cols-2 gap-6">
                                 <div>
                                     <h4 class="text-sm font-semibold text-blue-400 mb-3">
-                                        Frontend Features
+                                        Hardware & Edge
                                     </h4>
                                     <ul class="space-y-2 text-sm text-gray-400">
-                                        <li>• Real-time Data Visualization</li>
-                                        <li>• Interactive Dashboards</li>
-                                        <li>• Custom Chart Components</li>
-                                        <li>• Data Export Tools</li>
+                                        <li>• Arduino sensor network</li>
+                                        <li>• Edge preprocessing</li>
+                                        <li>• Low-power telemetry</li>
                                     </ul>
                                 </div>
+
                                 <div>
                                     <h4 class="text-sm font-semibold text-purple-400 mb-3">
-                                        Backend Pipeline
+                                        Cloud & Models
                                     </h4>
                                     <ul class="space-y-2 text-sm text-gray-400">
-                                        <li>• Apache Kafka Streams</li>
-                                        <li>• ClickHouse Analytics DB</li>
-                                        <li>• Python Data Processing</li>
-                                        <li>• Redis Time Series</li>
+                                        <li>• Keras models for prediction</li>
+                                        <li>• Django dashboards for monitoring</li>
+                                        <li>• Alerts and scheduled inspections</li>
                                     </ul>
                                 </div>
                             </div>
+
                             <div class="space-y-3">
                                 <h4 class="text-sm font-semibold text-teal-400">
-                                    Performance Metrics
+                                    Key Achievements
                                 </h4>
                                 <ul class="space-y-2 text-sm text-gray-400">
-                                    <li>• 1M+ Events/Minute Processing</li>
-                                    <li>• Sub-second Query Response</li>
-                                    <li>• 99.99% Data Accuracy</li>
+                                    <li>• Patent granted (2024)</li>
+                                    <li>• Hackathon winner and IEEE recognition</li>
+                                    <li>
+                                        • Significant predicted OPEX reduction for pilot customers
+                                    </li>
                                 </ul>
                             </div>
                         </div>
+
                         <div class="bg-black/30 rounded-xl p-6">
-                            <h4 class="text-sm font-semibold text-gray-400 mb-4">
-                                Data Flow Architecture
-                            </h4>
+                            <h4 class="text-sm font-semibold text-gray-400 mb-4">System Sketch</h4>
                             <div class="aspect-4/3 bg-black/50 rounded-lg p-4">
                                 <svg class="w-full h-full" viewBox="0 0 400 300">
                                     <g>
                                         <rect
                                             x="20"
                                             y="20"
-                                            width="110"
-                                            height="30"
+                                            width="360"
+                                            height="40"
                                             rx="4"
                                             class="fill-blue-500/20 stroke-blue-500"
                                             stroke-width="1"></rect>
-                                        <rect
-                                            x="145"
-                                            y="20"
-                                            width="110"
-                                            height="30"
-                                            rx="4"
-                                            class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
-                                        <rect
-                                            x="270"
-                                            y="20"
-                                            width="110"
-                                            height="30"
-                                            rx="4"
-                                            class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="75"
-                                            y="40"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Web Events
-                                        </text>
                                         <text
                                             x="200"
-                                            y="40"
+                                            y="45"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Mobile Events
-                                        </text>
-                                        <text
-                                            x="325"
-                                            y="40"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            API Events
+                                            Sensors (Arduino)
                                         </text>
                                     </g>
                                     <g>
                                         <rect
-                                            x="20"
-                                            y="80"
-                                            width="360"
+                                            x="80"
+                                            y="100"
+                                            width="240"
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
                                             stroke-width="1"></rect>
                                         <text
                                             x="200"
-                                            y="105"
+                                            y="125"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Kafka Event Streaming
+                                            Edge Preprocessing → Telemetry
                                         </text>
                                     </g>
                                     <g>
                                         <rect
                                             x="20"
-                                            y="150"
-                                            width="170"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
-                                        <rect
-                                            x="210"
-                                            y="150"
-                                            width="170"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="105"
-                                            y="175"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Stream Processing
-                                        </text>
-                                        <text
-                                            x="295"
-                                            y="175"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Batch Processing
-                                        </text>
-                                    </g>
-                                    <g>
-                                        <rect
-                                            x="20"
-                                            y="220"
-                                            width="170"
-                                            height="30"
-                                            rx="4"
-                                            class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
-                                        <rect
-                                            x="210"
-                                            y="220"
-                                            width="170"
-                                            height="30"
-                                            rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="105"
-                                            y="240"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            ClickHouse
-                                        </text>
-                                        <text
-                                            x="295"
-                                            y="240"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Redis Time Series
-                                        </text>
-                                    </g>
-                                    <g>
-                                        <rect
-                                            x="20"
-                                            y="270"
+                                            y="180"
                                             width="360"
-                                            height="30"
+                                            height="40"
                                             rx="4"
                                             class="fill-teal-500/20 stroke-teal-500"
                                             stroke-width="1"></rect>
                                         <text
                                             x="200"
-                                            y="290"
+                                            y="205"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            GraphQL API Layer
+                                            Cloud Models + Dashboard
                                         </text>
                                     </g>
                                     <g class="stroke-gray-600" stroke-width="1">
-                                        <line x1="75" y1="50" x2="75" y2="80"></line>
-                                        <line x1="200" y1="50" x2="200" y2="80"></line>
-                                        <line x1="325" y1="50" x2="325" y2="80"></line>
-                                        <line x1="200" y1="120" x2="200" y2="150"></line>
-                                        <line x1="105" y1="190" x2="105" y2="220"></line>
-                                        <line x1="295" y1="190" x2="295" y2="220"></line>
-                                        <line x1="200" y1="250" x2="200" y2="270"></line>
+                                        <line x1="200" y1="60" x2="200" y2="100"></line>
+                                        <line x1="200" y1="140" x2="200" y2="180"></line>
                                     </g>
                                 </svg>
                             </div>
@@ -960,7 +974,7 @@
                     stroke-width="2"
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
             </svg>
-            <span>San Francisco, CA</span>
+            <span>Maharashtra, India</span>
         </div>
         <div class="max-w-xl mx-auto">
             <form class="space-y-6">
@@ -1003,7 +1017,8 @@
         </div>
         <div class="flex flex-col sm:flex-row justify-center gap-4 my-8">
             <a
-                href="#"
+                href="assets/resume.pdf" 
+                download
                 class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#21262D] border border-gray-800 text-white rounded-lg font-medium hover:bg-gray-900 transition-colors">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path
