@@ -601,7 +601,7 @@
                                     xmlns="http://www.w3.org/2000/svg"
                                     role="img"
                                     aria-label="NLP Analytics Project Architecture">
-                                    <!-- Title row -->
+                                    <!-- Title -->
                                     <g>
                                         <rect
                                             x="40"
@@ -610,7 +610,7 @@
                                             height="40"
                                             rx="4"
                                             class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
                                             x="450"
                                             y="42"
@@ -620,7 +620,7 @@
                                         </text>
                                     </g>
 
-                                    <!-- Nginx & PHP row (even spacing) -->
+                                    <!-- Nginx + PHP -->
                                     <g>
                                         <rect
                                             x="40"
@@ -629,9 +629,9 @@
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
-                                            x="240"
+                                            x="245"
                                             y="108"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
@@ -645,9 +645,9 @@
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
-                                            x="660"
+                                            x="670"
                                             y="108"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
@@ -655,7 +655,7 @@
                                         </text>
                                     </g>
 
-                                    <!-- Azure Docker Container (wide) -->
+                                    <!-- Azure Docker -->
                                     <g>
                                         <rect
                                             x="40"
@@ -664,7 +664,7 @@
                                             height="40"
                                             rx="4"
                                             class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
                                             x="450"
                                             y="174"
@@ -674,16 +674,198 @@
                                         </text>
                                     </g>
 
-                                    <!-- CI/CD and Git -->
+                                    <!-- LLM -->
+                                    <g>
+                                        <rect
+                                            x="40"
+                                            y="216"
+                                            width="260"
+                                            height="136"
+                                            rx="4"
+                                            class="fill-blue-500/20 stroke-blue-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="170"
+                                            y="280"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            LLM
+                                        </text>
+                                        <text
+                                            x="170"
+                                            y="300"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Insight Inference
+                                        </text>
+                                    </g>
+
+                                    <!-- Docker Containers -->
+                                    <g>
+                                        <rect
+                                            x="320"
+                                            y="216"
+                                            width="240"
+                                            height="80"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="440"
+                                            y="250"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Docker Container 1
+                                        </text>
+                                        <text
+                                            x="440"
+                                            y="270"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            ETL · Sentiment Analysis
+                                        </text>
+
+                                        <rect
+                                            x="580"
+                                            y="216"
+                                            width="280"
+                                            height="80"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="720"
+                                            y="250"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Docker Container 2
+                                        </text>
+                                        <text
+                                            x="720"
+                                            y="270"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Aggregation · Trends
+                                        </text>
+                                    </g>
+
+                                    <!-- VMs -->
+                                    <g>
+                                        <rect
+                                            x="320"
+                                            y="312"
+                                            width="240"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="440"
+                                            y="336"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Tesla T4 V3 GPU VM
+                                        </text>
+
+                                        <rect
+                                            x="580"
+                                            y="312"
+                                            width="280"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="720"
+                                            y="336"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            F16 V2 VM
+                                        </text>
+                                    </g>
+
+                                    <!-- Databases (evenly spaced across width) -->
+                                    <g>
+                                        <rect
+                                            x="60"
+                                            y="384"
+                                            width="240"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="180"
+                                            y="408"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Ingest DB
+                                        </text>
+                                        <text
+                                            x="180"
+                                            y="428"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            (Azure Flexible MySQL)
+                                        </text>
+
+                                        <rect
+                                            x="330"
+                                            y="384"
+                                            width="240"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="450"
+                                            y="408"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Pipeline DB
+                                        </text>
+                                        <text
+                                            x="450"
+                                            y="428"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            (Azure Flexible MySQL)
+                                        </text>
+
+                                        <rect
+                                            x="600"
+                                            y="384"
+                                            width="240"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="720"
+                                            y="408"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            EDASurveys DB
+                                        </text>
+                                        <text
+                                            x="720"
+                                            y="428"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            (Azure Flexible MySQL)
+                                        </text>
+                                    </g>
+
+                                    <!-- CI/CD & Git (bottom above cloud) -->
                                     <g>
                                         <rect
                                             x="40"
                                             y="460"
-                                            width="410"
+                                            width="400"
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
                                             x="240"
                                             y="484"
@@ -693,13 +875,13 @@
                                         </text>
 
                                         <rect
-                                            x="480"
+                                            x="460"
                                             y="460"
-                                            width="380"
+                                            width="400"
                                             height="40"
                                             rx="4"
                                             class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
                                             x="660"
                                             y="484"
@@ -709,189 +891,7 @@
                                         </text>
                                     </g>
 
-                                    <!-- Docker containers (center) -->
-                                    <g>
-                                        <rect
-                                            x="340"
-                                            y="216"
-                                            width="240"
-                                            height="80"
-                                            rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="460"
-                                            y="250"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Docker Container 1
-                                        </text>
-                                        <text
-                                            x="460"
-                                            y="270"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            ETL · Sentiment Analysis
-                                        </text>
-
-                                        <rect
-                                            x="620"
-                                            y="216"
-                                            width="240"
-                                            height="80"
-                                            rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="740"
-                                            y="250"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Docker Container 2
-                                        </text>
-                                        <text
-                                            x="740"
-                                            y="270"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Aggregation · Trends
-                                        </text>
-                                    </g>
-
-                                    <!-- VMs row (under containers) -->
-                                    <g>
-                                        <rect
-                                            x="340"
-                                            y="312"
-                                            width="240"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="460"
-                                            y="336"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Tesla T4 V3 GPU VM
-                                        </text>
-
-                                        <rect
-                                            x="620"
-                                            y="312"
-                                            width="240"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="740"
-                                            y="336"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            F16 V2 VM
-                                        </text>
-                                    </g>
-
-                                    <!-- LLM box (right side, spans containers+VMs vertically) -->
-                                    <g>
-                                        <rect
-                                            x="40"
-                                            y="216"
-                                            width="240"
-                                            height="80"
-                                            rx="4"
-                                            class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="170"
-                                            y="250"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            LLM
-                                        </text>
-                                        <text
-                                            x="170"
-                                            y="270"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Insight Inference
-                                        </text>
-                                    </g>
-
-                                    <!-- DB row (above cloud bar) -->
-                                    <g>
-                                        <rect
-                                            x="120"
-                                            y="380"
-                                            width="200"
-                                            height="64"
-                                            rx="4"
-                                            class="fill-red-500/20 stroke-red-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="220"
-                                            y="404"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Ingest DB
-                                        </text>
-                                        <text
-                                            x="220"
-                                            y="428"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            (Azure Flexible MySQL)
-                                        </text>
-
-                                        <rect
-                                            x="360"
-                                            y="380"
-                                            width="200"
-                                            height="64"
-                                            rx="4"
-                                            class="fill-red-500/20 stroke-red-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="460"
-                                            y="404"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Pipeline DB
-                                        </text>
-                                        <text
-                                            x="460"
-                                            y="428"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            (Azure Flexible MySQL)
-                                        </text>
-
-                                        <rect
-                                            x="600"
-                                            y="380"
-                                            width="200"
-                                            height="64"
-                                            rx="4"
-                                            class="fill-red-500/20 stroke-red-500"
-                                            stroke-width="1"></rect>
-                                        <text
-                                            x="700"
-                                            y="404"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            EDASurveys DB
-                                        </text>
-                                        <text
-                                            x="700"
-                                            y="428"
-                                            text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            (Azure Flexible MySQL)
-                                        </text>
-                                    </g>
-
-                                    <!-- Azure Cloud bar at y=520 (fixed end) -->
+                                    <!-- Azure Cloud -->
                                     <g>
                                         <rect
                                             x="40"
@@ -900,7 +900,7 @@
                                             height="40"
                                             rx="4"
                                             class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
                                             x="450"
                                             y="544"
@@ -908,27 +908,6 @@
                                             class="fill-gray-400 text-[12px]">
                                             Microsoft Azure Cloud Infrastructure
                                         </text>
-                                    </g>
-
-                                    <!-- All connection lines grouped and styled -->
-                                    <g class="stroke-gray-600" stroke-width="1">
-                                        <line x1="250" y1="122" x2="250" y2="150" />
-                                        <line x1="660" y1="122" x2="660" y2="150" />
-
-                                        <line x1="170" y1="216" x2="170" y2="200" />
-                                        <line x1="170" y1="308" x2="170" y2="380" />
-
-                                        <line x1="400" y1="256" x2="400" y2="312" />
-                                        <line x1="700" y1="256" x2="700" y2="312" />
-
-                                        <line x1="720" y1="296" x2="760" y2="296" />
-
-                                        <line x1="220" y1="420" x2="400" y2="332" />
-                                        <line x1="460" y1="420" x2="640" y2="332" />
-                                        <line x1="700" y1="420" x2="740" y2="292" />
-
-                                        <line x1="450" y1="190" x2="450" y2="380" />
-                                        <line x1="170" y1="308" x2="170" y2="520" />
                                     </g>
                                 </svg>
                             </div>
