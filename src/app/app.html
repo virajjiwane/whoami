@@ -616,7 +616,7 @@
                                             y="42"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            NLP Analytics Project Architecture
+                                            Culture Analytics Dashboard
                                         </text>
                                     </g>
 
@@ -695,7 +695,7 @@
                                             x="170"
                                             y="300"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
+                                            class="fill-gray-400 text-[12px] font-thin">
                                             Insight Inference
                                         </text>
                                     </g>
@@ -715,13 +715,13 @@
                                             y="250"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Docker Container 1
+                                            Docker Container #1
                                         </text>
                                         <text
                                             x="440"
                                             y="270"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
+                                            class="fill-gray-400 text-[12px] font-thin">
                                             ETL · Sentiment Analysis
                                         </text>
 
@@ -738,13 +738,13 @@
                                             y="250"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Docker Container 2
+                                            Docker Container #2
                                         </text>
                                         <text
                                             x="720"
                                             y="270"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
+                                            class="fill-gray-400 text-[12px] font-thin">
                                             Aggregation · Trends
                                         </text>
                                     </g>
@@ -787,31 +787,31 @@
                                     <!-- Databases (evenly spaced across width) -->
                                     <g>
                                         <rect
-                                            x="60"
-                                            y="384"
+                                            x="40"
+                                            y="374"
                                             width="240"
                                             height="64"
                                             rx="4"
                                             class="fill-red-500/20 stroke-red-500"
                                             stroke-width="1" />
                                         <text
-                                            x="180"
-                                            y="408"
+                                            x="160"
+                                            y="398"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
                                             Ingest DB
                                         </text>
                                         <text
-                                            x="180"
-                                            y="428"
+                                            x="160"
+                                            y="418"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
+                                            class="fill-gray-400 text-[12px] font-thin">
                                             (Azure Flexible MySQL)
                                         </text>
 
                                         <rect
                                             x="330"
-                                            y="384"
+                                            y="374"
                                             width="240"
                                             height="64"
                                             rx="4"
@@ -819,39 +819,39 @@
                                             stroke-width="1" />
                                         <text
                                             x="450"
-                                            y="408"
+                                            y="398"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
                                             Pipeline DB
                                         </text>
                                         <text
                                             x="450"
-                                            y="428"
+                                            y="418"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
+                                            class="fill-gray-400 text-[12px] font-thin">
                                             (Azure Flexible MySQL)
                                         </text>
 
                                         <rect
-                                            x="600"
-                                            y="384"
+                                            x="620"
+                                            y="374"
                                             width="240"
                                             height="64"
                                             rx="4"
                                             class="fill-red-500/20 stroke-red-500"
                                             stroke-width="1" />
                                         <text
-                                            x="720"
-                                            y="408"
+                                            x="740"
+                                            y="398"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
                                             EDASurveys DB
                                         </text>
                                         <text
-                                            x="720"
-                                            y="428"
+                                            x="740"
+                                            y="418"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
+                                            class="fill-gray-400 text-[12px] font-thin">
                                             (Azure Flexible MySQL)
                                         </text>
                                     </g>
@@ -1220,7 +1220,10 @@
             <span>Maharashtra, India</span>
         </div>
         <div class="max-w-xl mx-auto">
-            <form class="space-y-6">
+            <form
+                class="space-y-6"
+                (ngSubmit)="sendEmail()"
+                [formGroup]="emailForm">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
                         Name
@@ -1228,8 +1231,8 @@
                     <input
                         type="text"
                         id="name"
-                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-                        disabled="" />
+                        formControlName="name"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" />
                 </div>
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
@@ -1238,8 +1241,18 @@
                     <input
                         type="email"
                         id="email"
-                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors"
-                        disabled="" />
+                        formControlName="email"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" />
+                </div>
+                <div>
+                    <label for="title" class="block text-sm font-medium text-gray-300 mb-2">
+                        Title
+                    </label>
+                    <input
+                        type="text"
+                        id="title"
+                        formControlName="title"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" />
                 </div>
                 <div>
                     <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
@@ -1248,14 +1261,21 @@
                     <textarea
                         id="message"
                         rows="4"
-                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none"
-                        disabled=""></textarea>
+                        formControlName="message"
+                        class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none"></textarea>
                 </div>
                 <button
-                    type="button"
-                    class="w-full px-6 py-3 text-white font-medium bg-linear-to-r from-blue-500 to-purple-500 rounded-lg hover:opacity-90 transition-opacity">
+                    type="submit"
+                    [disabled]="!emailForm.valid"
+                    ngClass="w-full px-6 py-3 text-white font-medium bg-linear-to-r from-blue-500 to-purple-500 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
                     Send Message
                 </button>
+                <!-- Show Error Message -->
+                 @if(emailForm.invalid && emailForm.touched) {
+                <div class="mt-4 text-sm text-red-500">
+                    Please fill out all fields correctly.
+                </div>
+            }
             </form>
         </div>
         <div class="flex flex-col sm:flex-row justify-center gap-4 my-8">
@@ -1273,12 +1293,12 @@
                         d="M8 11a1 1 0 100 2h4a1 1 0 100-2H8zm0-4a1 1 0 100 2h4a1 1 0 100-2H8z"
                         clip-rule="evenodd"></path>
                 </svg>
-                View Resume
+                Download Resume
             </a>
         </div>
         <div class="flex justify-center gap-6">
             <a
-                href="#"
+                href="https://github.com/virajjiwane/"
                 class="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -1286,7 +1306,7 @@
                 </svg>
             </a>
             <a
-                href="#"
+                href="https://www.linkedin.com/in/viraj-jiwane-33aa2b126/"
                 class="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -1294,13 +1314,39 @@
                 </svg>
             </a>
             <a
-                href="#"
+                href="https://x.com/viraj_jiwane/"
                 class="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
                         d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
                 </svg>
             </a>
+            <!-- Email -->
+            <a            
+                href="mailto:vjiwane27@gmail.com"
+                class="cursor-pointer text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"></path>
+                </svg>
+            </a>
         </div>
     </div>
 </section>
+
+<!-- Email Sent Confirmation Modal -->
+@if (emailSent()) {
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-gray-900 rounded-lg p-6 w-11/12 max-w-md text-center border border-gray-800">
+            <h3 class="text-xl font-bold mb-4 text-white">Message Sent!</h3>
+            <p class="text-gray-400 mb-6">
+                Thank you for reaching out. I'll get back to you as soon as possible.
+            </p>
+            <button
+                (click)="emailSent.set(false)"
+                class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                Close
+            </button>
+        </div>
+    </div>
+}
