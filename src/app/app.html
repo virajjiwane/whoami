@@ -118,6 +118,7 @@
             <div class="flex justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
                 <a
                     href="https://github.com/virajjiwane/"
+                    target="_blank"
                     class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
                     aria-label="GitHub">
                     <span
@@ -127,6 +128,7 @@
                 </a>
                 <a
                     href="https://www.linkedin.com/in/viraj-jiwane-33aa2b126/"
+                    target="_blank"
                     class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
                     aria-label="LinkedIn">
                     <span
@@ -136,6 +138,7 @@
                 </a>
                 <a
                     href="https://x.com/viraj_jiwane/"
+                    target="_blank"
                     class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
                     aria-label="Twitter">
                     <span
@@ -145,6 +148,7 @@
                 </a>
                 <a
                     href="https://medium.com/@vjiwane27/"
+                    target="_blank"
                     class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
                     aria-label="Blog">
                     <span
@@ -211,6 +215,54 @@
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Experience Section With Vertical Timeline and popup on scroll -->
+<section id="experience" class="py-12 sm:py-20 px-4 bg-[#161B22]" style="display: none">
+    <div class="max-w-6xl mx-auto">
+        <h2
+            class="text-3xl font-bold mb-8 text-center opacity-0"
+            [appIntersection]
+            (viewChange)="handleViewChange($event, 'animate-fade-in-up')">
+            Experience
+        </h2>
+
+        <div class="relative border-l-2 border-gray-700 ml-4">
+            <!-- Timeline Item 1 -->
+            <div
+                class="mb-8 ml-6 opacity-0"
+                [appIntersection]
+                (viewChange)="handleViewChange($event, 'animate-fade-in-left')">
+                <div
+                    class="absolute -left-4 mt-1 w-8 h-8 bg-blue-500 rounded-full border-4 border-gray-900 flex items-center justify-center">
+                    <span class="text-white text-lg">💼</span>
+                </div>
+                <h3 class="text-xl font-semibold">Senior Software Developer</h3>
+                <span class="text-gray-400">Euracle | Jan 2022 - Present</span>
+                <p class="mt-2 text-gray-300">
+                    Leading backend development for scalable analytics platforms. Designed and
+                    implemented microservices architecture, improving system reliability by 30% and
+                    reducing data processing time by 40%.
+                </p>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div
+                class="mb-8 ml-6 opacity-0"
+                [appIntersection]
+                (viewChange)="handleViewChange($event, 'animate-fade-in-left')">
+                <div
+                    class="absolute -left-4 mt-1 w-8 h-8 bg-blue-500 rounded-full border-4 border-gray-900 flex items-center justify-center">
+                    <span class="text-white text-lg">💼</span>
+                </div>
+                <h3 class="text-xl font-semibold">Software Developer</h3>
+                <span class="text-gray-400">TechSolutions Inc. | Jun 2019 - Dec 2021</span>
+                <p class="mt-2 text-gray-300">
+                    Developed and maintained RESTful APIs using Django and Spring Boot. Improved API
+                    response times by 25% through optimization and caching strategies.
+                </p>
+            </div>
+            </div>
     </div>
 </section>
 
@@ -1493,6 +1545,7 @@
                         type="text"
                         id="name"
                         formControlName="name"
+                        autoComplete="name"
                         class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" />
                 </div>
                 <div>
@@ -1503,6 +1556,7 @@
                         type="email"
                         id="email"
                         formControlName="email"
+                        autoComplete="email"
                         class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" />
                 </div>
                 <div>
@@ -1513,6 +1567,7 @@
                         type="text"
                         id="title"
                         formControlName="title"
+                        autoComplete="title"
                         class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors" />
                 </div>
                 <div>
@@ -1523,6 +1578,7 @@
                         id="message"
                         rows="4"
                         formControlName="message"
+                        autoComplete="message"
                         class="w-full px-4 py-2 rounded-lg border border-gray-600 bg-gray-800 text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-colors resize-none"></textarea>
                 </div>
                 <button
@@ -1560,6 +1616,8 @@
         <div class="flex justify-center gap-6">
             <a
                 href="https://github.com/virajjiwane/"
+                target="_blank"
+                aria-label="GitHub"
                 class="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -1568,6 +1626,8 @@
             </a>
             <a
                 href="https://www.linkedin.com/in/viraj-jiwane-33aa2b126/"
+                target="_blank"
+                aria-label="LinkedIn"
                 class="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -1576,6 +1636,8 @@
             </a>
             <a
                 href="https://x.com/viraj_jiwane/"
+                target="_blank"
+                aria-label="X (Twitter)"
                 class="text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
@@ -1585,6 +1647,7 @@
             <!-- Email -->
             <a
                 href="mailto:vjiwane27@gmail.com"
+                aria-label="Email"
                 class="cursor-pointer text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                     <path
