@@ -34,21 +34,26 @@ export class App {
 
     public sendEmail() {
         emailjs
-            .send('service_p6epjnl', 'template_r907mj4', {
-                ...this.emailForm.value,
-            }, {
-                publicKey: '9z5tnKtdB_iK5PmTE',
-            })
+            .send(
+                'service_p6epjnl',
+                'template_r907mj4',
+                {
+                    ...this.emailForm.value,
+                },
+                {
+                    publicKey: '9z5tnKtdB_iK5PmTE',
+                },
+            )
             .then(
                 () => {
-                    console.log('SUCCESS!');
                     this.emailSent.set(true);
                     this.emailForm.reset();
                 },
                 (error) => {
-                    console.log('FAILED...', error, (error as EmailJSResponseStatus).text);
                     // Display toast notification for failure
-                    alert('Failed to send the message. I probably ran out of credits to send mails. Please contact me directly at vjiwane27@gmail.com.');
+                    alert(
+                        'Failed to send the message. I probably ran out of credits to send mails. Please contact me directly at vjiwane27@gmail.com.',
+                    );
                 },
             );
     }

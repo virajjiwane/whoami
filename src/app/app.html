@@ -976,92 +976,354 @@
                                 System Architecture
                             </h4>
                             <div class="aspect-4/3 bg-black/50 rounded-lg p-4">
-                                <svg class="w-full h-full" viewBox="0 0 400 300">
+                                <svg
+                                    class="w-full h-full"
+                                    viewBox="0 0 900 560"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    role="img"
+                                    aria-label="LenDenClub Investment Architecture">
+                                    <!-- Top: Web + Mobile Apps -->
                                     <g>
                                         <rect
-                                            x="20"
-                                            y="20"
-                                            width="360"
-                                            height="40"
+                                            x="120"
+                                            y="46"
+                                            width="260"
+                                            height="64"
                                             rx="4"
                                             class="fill-blue-500/20 stroke-blue-500"
-                                            stroke-width="1"></rect>
+                                            stroke-width="1" />
                                         <text
-                                            x="200"
-                                            y="45"
+                                            x="250"
+                                            y="70"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            API Gateway (Auth, Rate-limit)
+                                            Investment Web APP
+                                        </text>
+                                        <text
+                                            x="250"
+                                            y="90"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                             (Angular)
                                         </text>
                                     </g>
                                     <g>
                                         <rect
-                                            x="20"
-                                            y="90"
-                                            width="110"
-                                            height="40"
+                                            x="520"
+                                            y="46"
+                                            width="260"
+                                            height="64"
                                             rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
-                                        <rect
-                                            x="145"
-                                            y="90"
-                                            width="110"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
-                                        <rect
-                                            x="270"
-                                            y="90"
-                                            width="110"
-                                            height="40"
-                                            rx="4"
-                                            class="fill-purple-500/20 stroke-purple-500"
-                                            stroke-width="1"></rect>
+                                            class="fill-blue-500/20 stroke-blue-500"
+                                            stroke-width="1" />
                                         <text
-                                            x="75"
-                                            y="115"
+                                            x="650"
+                                            y="70"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Origination
+                                            Investment Mobile APP
                                         </text>
                                         <text
-                                            x="200"
-                                            y="115"
+                                            x="650"
+                                            y="90"
                                             text-anchor="middle"
-                                            class="fill-gray-400 text-[12px]">
-                                            Underwriting
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                            (Flutter)
                                         </text>
+                                    </g>
+
+                                    <!-- Backends row (evenly spaced four boxes) -->
+                                    <g>
+                                        <rect
+                                            x="50"
+                                            y="130"
+                                            width="180"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
                                         <text
-                                            x="325"
-                                            y="115"
+                                            x="140"
+                                            y="154"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Disbursal
+                                            New LMS Backend
+                                        </text>>
+                                        <text
+                                            x="140"
+                                            y="174"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                            (Django)
                                         </text>
                                     </g>
                                     <g>
                                         <rect
-                                            x="20"
-                                            y="180"
-                                            width="360"
-                                            height="30"
+                                            x="263"
+                                            y="130"
+                                            width="180"
+                                            height="64"
                                             rx="4"
-                                            class="fill-teal-500/20 stroke-teal-500"
-                                            stroke-width="1"></rect>
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
                                         <text
-                                            x="200"
+                                            x="353"
+                                            y="154"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            New LMS Tasks &amp; Jobs
+                                        </text>
+                                        <text
+                                            x="353"
+                                            y="174"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                            (Celery Workers)
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="476"
+                                            y="130"
+                                            width="180"
+                                            height="124"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="566"
                                             y="200"
                                             text-anchor="middle"
                                             class="fill-gray-400 text-[12px]">
-                                            Postgres + Reconciliation Workers
+                                            Redis Commander
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="689"
+                                            y="130"
+                                            width="180"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="779"
+                                            y="154"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Legacy Investment Backend
+                                        </text>
+                                        <text
+                                            x="779"
+                                            y="174"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                            (Django)
                                         </text>
                                     </g>
-                                    <g class="stroke-gray-600" stroke-width="1">
-                                        <line x1="75" y1="130" x2="75" y2="180"></line>
-                                        <line x1="200" y1="130" x2="200" y2="180"></line>
-                                        <line x1="325" y1="130" x2="325" y2="180"></line>
+
+                                    <!-- Docker containers & Redis box row -->
+                                    <g>
+                                        <!-- Docker under New LMS Backend -->
+                                        <rect
+                                            x="50"
+                                            y="210"
+                                            width="180"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="140"
+                                            y="234"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Docker Container
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <!-- Redis box central (fed by Tasks & Redis Commander) -->
+                                        <rect
+                                            x="263"
+                                            y="210"
+                                            width="180"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="353"
+                                            y="234"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Redis
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <!-- Docker under Legacy Investment Backend -->
+                                        <rect
+                                            x="689"
+                                            y="210"
+                                            width="180"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="779"
+                                            y="234"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Docker Container
+                                        </text>
+                                    </g>
+
+                                    <!-- EC2 instances row (4 instances evenly spaced) -->
+                                    <g>
+                                        <rect
+                                            x="60"
+                                            y="300"
+                                            width="160"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="140"
+                                            y="324"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            EC2 Instance
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="240"
+                                            y="300"
+                                            width="160"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="320"
+                                            y="324"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            EC2 Instance
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="420"
+                                            y="300"
+                                            width="160"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="500"
+                                            y="324"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            EC2 Instance
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="600"
+                                            y="300"
+                                            width="160"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-red-500/20 stroke-red-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="680"
+                                            y="324"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            EC2 Instance
+                                        </text>
+                                    </g>
+
+                                    <!-- DB boxes (above cloud bar) -->
+                                    <g>
+                                        <rect
+                                            x="40"
+                                            y="436"
+                                            width="400"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="240"
+                                            y="460"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            New LMS DB
+                                        </text>
+                                        <text
+                                            x="240"
+                                            y="480"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                            (PostgreSQL)
+                                        </text>
+
+                                    </g>
+                                    <g>
+                                        <rect
+                                            x="460"
+                                            y="436"
+                                            width="400"
+                                            height="64"
+                                            rx="4"
+                                            class="fill-purple-500/20 stroke-purple-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="660"
+                                            y="460"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            Legacy Investment DB
+                                        </text>
+                                        <text
+                                            x="660"
+                                            y="480"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px] font-thin">
+                                            (PostgreSQL)
+                                        </text>
+                                    </g>
+
+                                    <!-- Azure Cloud bar at bottom (y=520) -->
+                                    <g>
+                                        <rect
+                                            x="40"
+                                            y="520"
+                                            width="820"
+                                            height="40"
+                                            rx="4"
+                                            class="fill-teal-500/20 stroke-teal-500"
+                                            stroke-width="1" />
+                                        <text
+                                            x="450"
+                                            y="544"
+                                            text-anchor="middle"
+                                            class="fill-gray-400 text-[12px]">
+                                            AWS Cloud Infrastructure
+                                        </text>
                                     </g>
                                 </svg>
                             </div>
@@ -1220,10 +1482,7 @@
             <span>Maharashtra, India</span>
         </div>
         <div class="max-w-xl mx-auto">
-            <form
-                class="space-y-6"
-                (ngSubmit)="sendEmail()"
-                [formGroup]="emailForm">
+            <form class="space-y-6" (ngSubmit)="sendEmail()" [formGroup]="emailForm">
                 <div>
                     <label for="name" class="block text-sm font-medium text-gray-300 mb-2">
                         Name
@@ -1267,15 +1526,15 @@
                 <button
                     type="submit"
                     [disabled]="!emailForm.valid"
-                    ngClass="w-full px-6 py-3 text-white font-medium bg-linear-to-r from-blue-500 to-purple-500 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed">
+                    ngClass="w-full px-6 py-3 text-white font-medium bg-linear-to-r from-blue-500 to-purple-500 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50 cursor-pointer disabled:cursor-not-allowed">
                     Send Message
                 </button>
                 <!-- Show Error Message -->
-                 @if(emailForm.invalid && emailForm.touched) {
-                <div class="mt-4 text-sm text-red-500">
-                    Please fill out all fields correctly.
-                </div>
-            }
+                @if (emailForm.invalid && emailForm.touched) {
+                    <div class="mt-4 text-sm text-red-500">
+                        Please fill out all fields correctly.
+                    </div>
+                }
             </form>
         </div>
         <div class="flex flex-col sm:flex-row justify-center gap-4 my-8">
@@ -1322,7 +1581,7 @@
                 </svg>
             </a>
             <!-- Email -->
-            <a            
+            <a
                 href="mailto:vjiwane27@gmail.com"
                 class="cursor-pointer text-gray-400 hover:text-white transition-colors p-2 hover:bg-gray-800 rounded-lg">
                 <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
