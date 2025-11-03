@@ -1,0 +1,108 @@
+@use '../../../tailwind.config.css';
+
+/* timeline core layout */
+.timeline {
+    @apply relative max-w-6xl mx-auto;
+    /* vertical gradient spine — slightly thick & blurred look */
+}
+.timeline::after {
+    content: '';
+    @apply absolute top-0 bottom-0 left-1/2 -ml-1.5 w-3 rounded-full;
+    background: linear-gradient(
+        180deg,
+        rgba(59, 130, 246),
+        rgba(139, 92, 246),
+        rgba(236, 72, 153, 0.1)
+    );
+}
+
+/* container to hold items (positioned relative so left/right items align) */
+.timeline-container {
+    @apply relative;
+    padding: 24px 12px;
+}
+
+/* items take half width and align on either side */
+.timeline-item {
+    @apply relative w-1/2 px-6 py-3 cursor-pointer;
+    outline: none;
+}
+.timeline-item.left {
+    left: 0;
+    @apply pr-8;
+}
+.timeline-item.right {
+    left: 50%;
+    @apply pl-8;
+}
+
+/* card style (dark, minimalist, slightly raised) */
+.timeline-card {
+    @apply bg-[#0b0f12] border border-gray-800 rounded-2xl p-5 shadow-lg;
+    transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        background 0.18s;
+}
+.timeline-card:hover,
+.timeline-item:focus .timeline-card {
+    transform: translateY(-6px);
+    @apply shadow-2xl;
+}
+
+/* card header / date */
+.timeline-card-top {
+    @apply flex items-baseline justify-between gap-3;
+}
+.timeline-card .date {
+    @apply text-sm text-gray-400;
+}
+
+/* year dot badge — positioned on spine center */
+.timeline-item::before {
+    content: attr(data-year);
+    @apply absolute left-[50%] -translate-x-1/2 text-[11px] font-semibold text-white;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 9999px;
+    background: linear-gradient(180deg, #111827, #0b1220);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+    transform: translateX(-50%) translateY(-50%);
+    top: calc(var(--year-top, 0px)); /* fallback to manual placement if needed */
+}
+
+/* ensure left / right badges don't overlap card — shift them horizontally */
+.timeline-item.left::before {
+    @apply -translate-x-[50%];
+    left: calc(50% - 1.5rem);
+}
+.timeline-item.right::before {
+    @apply -translate-x-[50%];
+    left: calc(50% + 1.5rem);
+}
+
+/* responsive — stack on small screens */
+@screen sm {
+    .timeline-item {
+        @apply w-full left-0 px-4;
+    }
+    .timeline-item.right {
+        @apply left-0;
+    }
+    .timeline-item::before {
+        left: 28px;
+        transform: translateY(-50%);
+    }
+    .timeline::after {
+        left: 24px;
+    }
+}
+
+/* small niceties */
+.timeline-card p {
+    @apply text-sm;
+    color: #cbd5e1;
+}

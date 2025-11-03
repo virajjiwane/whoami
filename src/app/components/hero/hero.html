@@ -1,0 +1,178 @@
+<!-- Hero section -->
+<div class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 grid-background opacity-20">
+        <div class="grid-overlay animate-pulse-slow"></div>
+    </div>
+    <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute top-20 left-1/4 animate-float opacity-50" style="animation-delay: 0s">
+            <span class="text-4xl">⚛️</span>
+        </div>
+        <div class="absolute top-40 right-1/3 animate-float opacity-50" style="animation-delay: 2s">
+            <span class="text-4xl">🚀</span>
+        </div>
+        <div
+            class="absolute bottom-32 left-1/3 animate-float opacity-50"
+            style="animation-delay: 1s">
+            <span class="text-4xl">💻</span>
+        </div>
+        <div
+            class="absolute bottom-20 right-1/4 animate-float opacity-50"
+            style="animation-delay: 3s">
+            <span class="text-4xl">🔥</span>
+        </div>
+    </div>
+    <div class="relative z-10 max-w-5xl mx-auto px-4">
+        <div class="text-center space-y-6">
+            <div
+                class="relative inline-block px-4 sm:px-0 opacity-0"
+                [appIntersection]
+                (viewChange)="
+                    animationService.handleViewChange($event, 'animate-fade-in-up-bounce')
+                ">
+                <div
+                    class="absolute -inset-1 bg-linear-to-r from-blue-500 via-purple-500 to-pink-500 rounded-2xl blur-xl opacity-75"></div>
+                <h1
+                    class="relative text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight bg-clip-text text-transparent bg-linear-to-r from-white to-gray-300 pb-2">
+                    Viraj Jiwane
+                </h1>
+            </div>
+            <div
+                class="space-y-4 sm:space-y-6 mt-6 sm:mt-8 opacity-0"
+                [appIntersection]
+                (viewChange)="
+                    animationService.handleViewChange($event, 'animate-fade-in-up-bounce')
+                ">
+                <div class="flex flex-col items-center gap-4">
+                    <div class="flex items-center gap-3">
+                        <span class="h-px w-8 sm:w-12 bg-blue-500"></span>
+                        <h2 class="text-xl sm:text-2xl font-light tracking-wide text-blue-400">
+                            Senior Software Developer | Systems, APIs, Data pipelines
+                        </h2>
+                        <span class="h-px w-8 sm:w-12 bg-blue-500"></span>
+                    </div>
+                    <p class="text-base sm:text-lg text-gray-400 max-w-2xl px-4 sm:px-0">
+                        5+ years. 14 projects. Scalable systems for 500k+ users. Proven delivery and
+                        measurable impact.
+                    </p>
+                </div>
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mt-6 sm:mt-8 px-4 sm:px-0">
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        Django
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        Docker
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        PostgreSQL
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        System Design
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        AWS
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        RESTful APIs
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        CI/CD
+                    </span>
+                    <span
+                        class="px-3 sm:px-4 py-1 sm:py-1.5 bg-[#1A1F2B] rounded-full text-sm font-medium text-gray-300 border border-[#2D333B] hover:border-blue-500/50 transition-colors">
+                        Angular
+                    </span>
+                </div>
+            </div>
+            <div
+                class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mt-8 sm:mt-12 px-4 sm:px-0 opacity-0"
+                [appIntersection]
+                (viewChange)="
+                    animationService.handleViewChange($event, 'animate-fade-in-scale-up')
+                ">
+                <a href="#contact" class="group relative inline-flex items-center justify-center">
+                    <div
+                        class="absolute -inset-0.5 bg-linear-to-r from-blue-500 to-purple-500 rounded-full blur opacity-75 group-hover:opacity-100 transition"></div>
+                    <span
+                        class="relative px-6 sm:px-8 py-3 bg-[#161B22] rounded-full inline-flex items-center justify-center w-full sm:w-auto">
+                        Hire Me
+                        <svg
+                            class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a
+                    href="#work"
+                    class="px-6 sm:px-8 py-3 bg-[#21262D] rounded-full hover:bg-[#2D333B] transition-colors border border-[#2D333B] hover:border-gray-600 text-center">
+                    View My Work
+                </a>
+            </div>
+            <div class="flex justify-center gap-4 sm:gap-6 mt-8 sm:mt-12">
+                <a
+                    href="https://github.com/virajjiwane/"
+                    target="_blank"
+                    class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
+                    aria-label="GitHub">
+                    <span
+                        class="text-xl sm:text-2xl group-hover:scale-110 transition-transform inline-block">
+                        🐙
+                    </span>
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/viraj-jiwane-33aa2b126/"
+                    target="_blank"
+                    class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
+                    aria-label="LinkedIn">
+                    <span
+                        class="text-xl sm:text-2xl group-hover:scale-110 transition-transform inline-block">
+                        💼
+                    </span>
+                </a>
+                <a
+                    href="https://x.com/viraj_jiwane/"
+                    target="_blank"
+                    class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
+                    aria-label="Twitter">
+                    <span
+                        class="text-xl sm:text-2xl group-hover:scale-110 transition-transform inline-block">
+                        🐦
+                    </span>
+                </a>
+                <a
+                    href="https://medium.com/@vjiwane27/"
+                    target="_blank"
+                    class="group relative p-2 sm:p-3 hover:text-blue-400 transition-colors"
+                    aria-label="Blog">
+                    <span
+                        class="text-xl sm:text-2xl group-hover:scale-110 transition-transform inline-block">
+                        ✍️
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="absolute bottom-8 inset-x-0 flex flex-col items-center animate-bounce">
+        <span class="text-gray-400 text-sm mb-2 text-center">Scroll to explore</span>
+        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</div>

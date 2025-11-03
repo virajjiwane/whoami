@@ -1,0 +1,45 @@
+<!-- About Me Section -->
+<section id="about" class="py-12 sm:py-20 px-4 bg-[#161B22]">
+    <div class="max-w-6xl mx-auto">
+        <h2
+            class="text-3xl font-bold mb-8 text-center opacity-0"
+            [appIntersection]
+            (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
+            About Me
+        </h2>
+        <div
+            class="text-gray-400 space-y-6 opacity-0"
+            [appIntersection]
+            (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
+            <p class="text-lg sm:text-xl text-white font-medium">
+                I build reliable backend systems and analytics pipelines that scale. I focus on
+                simplicity, test coverage, and measurable performance gains.
+            </p>
+
+            <p class="text-gray-300">
+                I'm Viraj Jiwane. I design and implement backend systems, microservices, and data
+                pipelines. I've worked across startups and enterprise clients to reduce latency,
+                automate processes, and improve reliability.
+            </p>
+
+            <div class="grid gap-4 sm:grid-cols-2">
+                <div>
+                    <h4 class="text-sm font-semibold text-blue-400 mb-2">Key facts</h4>
+                    <ul class="text-gray-400 space-y-1">
+                        <li>• 5+ years experience</li>
+                        <li>• 14 projects</li>
+                        <li>• 95% on-time delivery rate</li>
+                        <li>• Patent: SILI Tool (Patent No. 522541, 2024)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-teal-400 mb-2">Core tech</h4>
+                    <p class="text-gray-400">
+                        Python · Django · Spring Boot · Docker · PostgreSQL · Angular · AWS ·
+                        TypeScript· PHP · Flutter
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
