@@ -1,8 +1,8 @@
-export interface Experience {
+export interface iExperience {
     company: string;
     role: string;
-    startDate: string;
-    endDate: string;
+    startDate: Date | string;
+    endDate: Date | string | 'Present';
     responsibilities: string[];
     technologies: string[];
     location: string;

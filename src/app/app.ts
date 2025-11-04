@@ -1,8 +1,4 @@
-import { Component, OnInit, signal, ViewChild } from '@angular/core';
-import { IntersectionDirective } from './directives/intersection';
-import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
-import { FormGroup, FormControl, ReactiveFormsModule, Validators, NgForm } from '@angular/forms';
-import { JsonPipe, NgClass } from '@angular/common';
+import { Component } from '@angular/core';
 import { Hero } from './components/hero/hero';
 import { AnimationService } from './services/animation';
 import { WorkExperience } from './components/work-experience/work-experience';
@@ -16,15 +12,7 @@ import { MyWork } from './components/my-work/my-work';
     templateUrl: './app.html',
     styleUrl: './app.scss',
     standalone: true,
-    imports: [
-        ReactiveFormsModule,
-        Hero,
-        AboutMe,
-        WorkExperience,
-        TechnicalExpertise,
-        MyWork,
-        Contact,
-    ],
+    imports: [Hero, AboutMe, WorkExperience, TechnicalExpertise, MyWork, Contact],
 })
 export class App {
     constructor(protected animationService: AnimationService) {}

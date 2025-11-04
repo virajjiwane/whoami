@@ -1,4 +1,4 @@
-export interface AboutMe {
+export interface iAboutMe {
     bio: string;
     profileImageUrl: string;
     description: string;

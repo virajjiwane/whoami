@@ -1,0 +1,103 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LenDenClub Investment Architecture"
+    width="100%" height="100%">
+    <!-- Web + Mobile Apps -->
+    <g>
+        <rect x="40" y="46" width="405" height="64" rx="4" stroke-width="1" fill="rgba(59,130,246,0.2)"
+            stroke="#3B82F6"></rect>
+        <text x="247" y="70" text-anchor="middle" fill="#9CA3AF" font-size="12px">Investment Web APP</text>
+        <text x="247" y="90" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(Angular)</text>
+
+        <rect x="465" y="46" width="405" height="64" rx="4" stroke-width="1" fill="rgba(59,130,246,0.2)"
+            stroke="#3B82F6"></rect>
+        <text x="672" y="70" text-anchor="middle" fill="#9CA3AF" font-size="12px">Investment Mobile APP</text>
+        <text x="672" y="90" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(Flutter)</text>
+    </g>
+
+    <!-- Backends -->
+    <g>
+        <rect x="40" y="135" width="190" height="64" rx="4" stroke-width="1" fill="rgba(168,85,247,0.2)"
+            stroke="#A855F7"></rect>
+        <text x="130" y="159" text-anchor="middle" fill="#9CA3AF" font-size="12px">New LMS Backend</text>
+        <text x="130" y="179" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(Django)</text>
+
+        <rect x="263" y="135" width="180" height="64" rx="4" stroke-width="1" fill="rgba(168,85,247,0.2)"
+            stroke="#A855F7"></rect>
+        <text x="353" y="159" text-anchor="middle" fill="#9CA3AF" font-size="12px">New LMS Tasks &amp; Jobs</text>
+        <text x="353" y="179" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(Celery
+            Workers)</text>
+
+        <rect x="476" y="135" width="180" height="134" rx="4" stroke-width="1" fill="rgba(168,85,247,0.2)"
+            stroke="#A855F7"></rect>
+        <text x="566" y="210" text-anchor="middle" fill="#9CA3AF" font-size="12px">Redis Commander</text>
+
+        <rect x="689" y="135" width="180" height="64" rx="4" stroke-width="1" fill="rgba(168,85,247,0.2)"
+            stroke="#A855F7"></rect>
+        <text x="779" y="159" text-anchor="middle" fill="#9CA3AF" font-size="12px">Legacy Investment Backend</text>
+        <text x="779" y="179" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(Django)</text>
+    </g>
+
+    <!-- Docker + Redis -->
+    <g>
+        <rect x="40" y="230" width="190" height="40" rx="4" stroke-width="1" fill="rgba(20,184,166,0.2)"
+            stroke="#14B8A6"></rect>
+        <text x="145" y="254" text-anchor="middle" fill="#9CA3AF" font-size="12px">Docker Container #1</text>
+
+        <rect x="263" y="230" width="180" height="40" rx="4" stroke-width="1" fill="rgba(20,184,166,0.2)"
+            stroke="#14B8A6"></rect>
+        <text x="353" y="254" text-anchor="middle" fill="#9CA3AF" font-size="12px">Redis</text>
+
+        <rect x="689" y="230" width="180" height="40" rx="4" stroke-width="1" fill="rgba(20,184,166,0.2)"
+            stroke="#14B8A6"></rect>
+        <text x="779" y="254" text-anchor="middle" fill="#9CA3AF" font-size="12px">Docker Container #2</text>
+    </g>
+
+    <!-- EC2 Instances -->
+    <g>
+        <rect x="40" y="320" width="190" height="40" rx="4" stroke-width="1" fill="rgba(239,68,68,0.2)"
+            stroke="#EF4444"></rect>
+        <text x="145" y="344" text-anchor="middle" fill="#9CA3AF" font-size="12px">EC2 Instance #1</text>
+
+        <rect x="260" y="320" width="180" height="40" rx="4" stroke-width="1" fill="rgba(239,68,68,0.2)"
+            stroke="#EF4444"></rect>
+        <text x="350" y="344" text-anchor="middle" fill="#9CA3AF" font-size="12px">EC2 Instance #2</text>
+
+        <rect x="480" y="320" width="180" height="40" rx="4" stroke-width="1" fill="rgba(239,68,68,0.2)"
+            stroke="#EF4444"></rect>
+        <text x="570" y="344" text-anchor="middle" fill="#9CA3AF" font-size="12px">EC2 Instance #3</text>
+
+        <rect x="689" y="320" width="180" height="40" rx="4" stroke-width="1" fill="rgba(239,68,68,0.2)"
+            stroke="#EF4444"></rect>
+        <text x="779" y="344" text-anchor="middle" fill="#9CA3AF" font-size="12px">EC2 Instance #4</text>
+    </g>
+
+    <!-- Databases -->
+    <g>
+        <rect x="40" y="410" width="400" height="64" rx="4" stroke-width="1" fill="rgba(168,85,247,0.2)"
+            stroke="#A855F7"></rect>
+        <text x="240" y="434" text-anchor="middle" fill="#9CA3AF" font-size="12px">New LMS DB</text>
+        <text x="240" y="454" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(PostgreSQL)</text>
+
+        <rect x="470" y="410" width="400" height="64" rx="4" stroke-width="1" fill="rgba(168,85,247,0.2)"
+            stroke="#A855F7"></rect>
+        <text x="670" y="434" text-anchor="middle" fill="#9CA3AF" font-size="12px">Legacy Investment DB</text>
+        <text x="660" y="454" text-anchor="middle" fill="#9CA3AF" font-size="12px" font-weight="300">(PostgreSQL)</text>
+    </g>
+
+    <!-- Cloud -->
+    <g>
+        <rect x="40" y="520" width="830" height="40" rx="4" stroke-width="1" fill="rgba(20,184,166,0.2)"
+            stroke="#14B8A6"></rect>
+        <text x="460" y="544" text-anchor="middle" fill="#9CA3AF" font-size="12px">AWS Cloud Infrastructure</text>
+    </g>
+
+    <!-- Connection lines -->
+    <g stroke-width="1" stroke="#4B5563" fill="none">
+        <line x1="130" y1="199" x2="130" y2="230"></line>
+        <line x1="353" y1="199" x2="353" y2="230"></line>
+        <line x1="779" y1="199" x2="779" y2="230"></line>
+        <line x1="130" y1="270" x2="130" y2="320"></line>
+        <line x1="353" y1="270" x2="353" y2="320"></line>
+        <line x1="566" y1="269" x2="566" y2="320"></line>
+        <line x1="779" y1="270" x2="779" y2="320"></line>
+    </g>
+</svg>

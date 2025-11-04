@@ -1,8 +1,8 @@
-import { Skill } from "./skill";
+import { iSkill } from './skill';
 
-export interface SkillGroup {
+export interface iSkillGroup {
     category: string;
-    skills: Skill[];
-    iconUrl: string;
-    colorHex: string;
+    skills: iSkill[];
+    icon: string;
+    color: string;
 }

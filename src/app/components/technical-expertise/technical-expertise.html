@@ -9,298 +9,39 @@
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
-            <!-- Backend & APIs -->
-            <div class="bg-[#21262D] rounded-lg p-6 transform hover:scale-[1.02] transition-all">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-3xl">⚡</span>
-                    <h3 class="text-xl font-bold">Backend &amp; APIs</h3>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Python &amp; Django</span>
-                            <span class="text-gray-400">92%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-green-500 to-green-700 animate-expand origin-left"
-                                style="width: 92%"></div>
-                        </div>
+            @for (skillGroup of skillGroups; track $index) {
+                <div
+                    class="bg-[#21262D] rounded-lg p-6 transform hover:scale-[1.02] transition-all">
+                    <div class="flex items-center gap-3 mb-6">
+                        <span class="text-3xl">{{ skillGroup.icon }}</span>
+                        <h3 class="text-xl font-bold">{{ skillGroup.category }}</h3>
                     </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Spring Boot (Java)</span>
-                            <span class="text-gray-400">85%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-green-500 to-green-700 animate-expand origin-left"
-                                style="width: 85%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>RESTful APIs</span>
-                            <span class="text-gray-400">95%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-green-500 to-green-700 animate-expand origin-left"
-                                style="width: 95%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Microservices &amp; System Design</span>
-                            <span class="text-gray-400">90%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-green-500 to-green-700 animate-expand origin-left"
-                                style="width: 90%"></div>
-                        </div>
+                    <div class="space-y-4">
+                        @for (skill of skillGroup.skills; track $index) {
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span>{{ skill.name }}</span>
+                                    <span class="text-gray-400">{{ skill.level }}%</span>
+                                </div>
+                                <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
+                                    <div
+                                        class="h-full bg-linear-to-r from-{{
+                                            skillGroup.color
+                                        }}-500 to-{{
+                                            skillGroup.color
+                                        }}-700 animate-expand origin-left"
+                                        [ngStyle]="{ width: skill.level + '%' }"></div>
+                                </div>
+                            </div>
+                        }
                     </div>
                 </div>
-            </div>
-
-            <!-- Performance & DevOps -->
-            <div class="bg-[#21262D] rounded-lg p-6 transform hover:scale-[1.02] transition-all">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-3xl">🚀</span>
-                    <h3 class="text-xl font-bold">Performance &amp; DevOps</h3>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Web &amp; Query Performance</span>
-                            <span class="text-gray-400">92%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-purple-500 to-purple-700 animate-expand origin-left"
-                                style="width: 92%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>CI/CD &amp; Automation</span>
-                            <span class="text-gray-400">90%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-purple-500 to-purple-700 animate-expand origin-left"
-                                style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Docker &amp; Docker Compose</span>
-                            <span class="text-gray-400">86%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-purple-500 to-purple-700 animate-expand origin-left"
-                                style="width: 86%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>AWS &amp; Cloud Infra</span>
-                            <span class="text-gray-400">84%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-purple-500 to-purple-700 animate-expand origin-left"
-                                style="width: 84%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Frontend -->
-            <div class="bg-[#21262D] rounded-lg p-6 transform hover:scale-[1.02] transition-all">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-3xl">🎨</span>
-                    <h3 class="text-xl font-bold">Frontend &amp; UX</h3>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Angular &amp; Modern JS</span>
-                            <span class="text-gray-400">81%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-blue-500 to-blue-700 animate-expand origin-left"
-                                style="width: 81%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Flutter (mobile &amp; web)</span>
-                            <span class="text-gray-400">70%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-blue-500 to-blue-700 animate-expand origin-left"
-                                style="width: 70%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>TypeScript &amp; CSS</span>
-                            <span class="text-gray-400">86%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-blue-500 to-blue-700 animate-expand origin-left"
-                                style="width: 86%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Accessibility &amp; Performance</span>
-                            <span class="text-gray-400">65%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-blue-500 to-blue-700 animate-expand origin-left"
-                                style="width: 65%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Data, ML & Analytics -->
-            <div class="bg-[#21262D] rounded-lg p-6 transform hover:scale-[1.02] transition-all">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-3xl">📊</span>
-                    <h3 class="text-xl font-bold">Data &amp; ML</h3>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Data Pipelines &amp; ETL</span>
-                            <span class="text-gray-400">90%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-yellow-500 to-yellow-700 animate-expand origin-left"
-                                style="width: 90%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>ML Modeling &amp; Deployment</span>
-                            <span class="text-gray-400">82%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-yellow-500 to-yellow-700 animate-expand origin-left"
-                                style="width: 82%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Sentence Transformers / NLP</span>
-                            <span class="text-gray-400">78%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-yellow-500 to-yellow-700 animate-expand origin-left"
-                                style="width: 78%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Analytics &amp; Dashboards</span>
-                            <span class="text-gray-400">88%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-yellow-500 to-yellow-700 animate-expand origin-left"
-                                style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tools & Databases -->
-            <div class="bg-[#21262D] rounded-lg p-6 transform hover:scale-[1.02] transition-all">
-                <div class="flex items-center gap-3 mb-6">
-                    <span class="text-3xl">🛠️</span>
-                    <h3 class="text-xl font-bold">Tools &amp; Databases</h3>
-                </div>
-                <div class="space-y-4">
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>PostgreSQL &amp; MongoDB</span>
-                            <span class="text-gray-400">92%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-red-500 to-red-700 animate-expand origin-left"
-                                style="width: 92%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Redis &amp; Caching</span>
-                            <span class="text-gray-400">86%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-red-500 to-red-700 animate-expand origin-left"
-                                style="width: 86%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Message Queues (Kafka)</span>
-                            <span class="text-gray-400">84%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-red-500 to-red-700 animate-expand origin-left"
-                                style="width: 84%"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm mb-1">
-                            <span>Testing &amp; Automation</span>
-                            <span class="text-gray-400">88%</span>
-                        </div>
-                        <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
-                            <div
-                                class="h-full bg-linear-to-r from-red-500 to-red-700 animate-expand origin-left"
-                                style="width: 88%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
         </div>
 
         <!-- Optional smaller summary row -->
         <div class="mt-8 text-sm text-gray-400 text-center">
-            <span>
-                Core: Python • Django • Spring Boot • PostgreSQL • Docker • AWS • System Design •
-                Microservices
-            </span>
+            <span>Core: {{ coreSkills.join(' • ') }}</span>
         </div>
     </div>
 </section>

@@ -1,11 +1,11 @@
-import { ProjectPoints } from "./project-points";
+import { iProjectPoints } from './project-points';
 
-export interface Project {
+export interface iProject {
     name: string;
     description: string;
     architecture: string; // SVG File URL
     projectUrl: string;
-    frontEndPoints: ProjectPoints;
-    backEndPoints: ProjectPoints;
-    achievements: ProjectPoints;
+    frontEndPoints: iProjectPoints;
+    backEndPoints: iProjectPoints;
+    achievements: iProjectPoints;
 }

@@ -1,0 +1,14 @@
+@use '../../../tailwind.config.css';
+
+.grid-background,
+.grid-background-dark {
+    background-size: 32px 32px;
+    transform: perspective(500px) rotateX(60deg);
+    transform-origin: top;
+}
+
+.grid-background {
+    background-image:
+        linear-gradient(hsla(0, 0%, 100%, 0.1) 1px, transparent 0),
+        linear-gradient(90deg, hsla(0, 0%, 100%, 0.1) 1px, transparent 0);
+}

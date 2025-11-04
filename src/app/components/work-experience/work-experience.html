@@ -1,86 +1,124 @@
 <!-- Experience Section With Vertical Timeline and popup on scroll -->
-<section id="experience" class="py-12 sm:py-20 px-4 bg-[#161B22]">
-    <div class="max-w-6xl mx-auto">
-        <h2
-            class="text-3xl font-bold mb-8 text-center opacity-0"
-            [appIntersection]
-            (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
-            Work Experience
-        </h2>
-        <div
-            class="timeline opacity-0"
-            [appIntersection]
-            (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
-            <div class="timeline-container">
-                <!-- Timeline item (left) -->
-                <div
-                    class="timeline-item left opacity-0"
-                    data-year="2024"
-                    (click)="openModal($event)"
-                    [appIntersection]="{ root: null, rootMargin: '0px', threshold: 0.2 }"
-                    (viewChange)="animationService.handleViewChange($event, 'animate-fade-in')"
-                    role="button"
-                    tabindex="0"
-                    aria-controls="modal1">
-                    <div class="timeline-card">
-                        <div class="timeline-card-top">
-                            <h3 class="text-lg font-bold">Sr. Software Developer — Euracle</h3>
-                            <p class="date text-sm text-gray-400">Jun 2023 — Present</p>
-                        </div>
-                        <p class="mt-3 text-gray-300">
-                            Built a scalable analytics pipeline and GDPR-compliant dashboards used
-                            across enterprise clients.
-                            <span class="text-teal-400">Click for more...</span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Timeline item (right) -->
-                <div
-                    class="timeline-item right opacity-0"
-                    data-year="2021"
-                    (click)="openModal($event)"
-                    [appIntersection]="{ root: null, rootMargin: '0px', threshold: 0.2 }"
-                    (viewChange)="animationService.handleViewChange($event, 'animate-fade-in')"
-                    role="button"
-                    tabindex="0"
-                    aria-controls="modal2">
-                    <div class="timeline-card">
-                        <div class="timeline-card-top">
-                            <h3 class="text-lg font-bold">Software Developer — LenDenClub</h3>
-                            <p class="date text-sm text-gray-400">2021 — 2023</p>
-                        </div>
-                        <p class="mt-3 text-gray-300">
-                            Led microservices redesign for loan disbursal — decreased disbursal time
-                            drastically.
-                            <span class="text-teal-400">Click for more...</span>
-                        </p>
-                    </div>
+@if (experience$) {
+    <section id="experience" class="py-12 sm:py-20 px-4 bg-[#161B22]">
+        <div class="max-w-6xl mx-auto">
+            <h2
+                class="text-3xl font-bold mb-8 text-center opacity-0"
+                [appIntersection]
+                (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
+                Work Experience
+            </h2>
+            <div
+                class="timeline opacity-0"
+                [appIntersection]
+                (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
+                <div class="timeline-container">
+                    @for (experienceKey of experienceOrder$; track $index; let isLeft = $even) {
+                        @if (experienceKey in experience$) {
+                            @let experienceItem = experience$[experienceKey];
+                            <!-- Timeline item -->
+                            <div
+                                class="timeline-item {{ isLeft ? 'left' : 'right' }} opacity-0"
+                                (click)="openModal(experienceKey)"
+                                [appIntersection]="{
+                                    root: null,
+                                    rootMargin: '0px',
+                                    threshold: 0.2,
+                                }"
+                                (viewChange)="
+                                    animationService.handleViewChange($event, 'animate-fade-in')
+                                "
+                                role="button"
+                                tabindex="0">
+                                <div class="date-badge">
+                                    {{ experienceItem.startDate | date: 'yyyy' }}
+                                </div>
+                                <div class="timeline-card">
+                                    <div class="timeline-card-top">
+                                        <h3 class="text-lg font-bold">
+                                            {{ experienceItem.role }} — {{ experienceItem.company }}
+                                        </h3>
+                                        <p class="date text-sm text-gray-400">
+                                            {{ experienceItem.startDate | date: 'MMM yyyy' }}
+                                            —
+                                            {{
+                                                experienceItem.endDate === 'Present'
+                                                    ? 'Present'
+                                                    : (experienceItem.endDate | date: 'MMM yyyy')
+                                            }}
+                                        </p>
+                                    </div>
+                                    <p class="mt-3 text-gray-300">
+                                        {{ experienceItem.description }}
+                                        <span class="text-teal-400">Click for more...</span>
+                                    </p>
+                                </div>
+                            </div>
+                        }
+                    }
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Optional lightweight modal (remove if you already have modal component) -->
-    <div
-        id="modal-backdrop"
-        class="hidden fixed inset-0 z-50 items-center justify-center bg-black/60">
+        <!-- Optional lightweight modal (remove if you already have modal component) -->
         <div
-            class="modal-card max-w-3xl w-full mx-4 rounded-2xl p-6 bg-[#0d1114] border border-gray-800 shadow-2xl">
-            <button
-                class="modal-close ml-auto block text-gray-400"
-                data-modal-close
-                (click)="closeModal()">
-                &times;
-            </button>
-            <h4 class="text-xl font-bold text-white">Sr. Software Developer — Euracle</h4>
-            <p class="text-sm text-gray-400 mt-2">Jun 2023 — Present</p>
-            <hr class="my-4 border-gray-800" />
-            <div class="text-gray-300">
-                <!-- Put full role details/case study here. -->
-                <p>• Built analytics pipeline (Python, NLP)...</p>
-                <p>• Improved throughput by 85%...</p>
+            id="modal-backdrop"
+            class="hidden fixed inset-0 z-50 items-center justify-center bg-black/60">
+            <div
+                class="modal-card max-w-3xl w-full mx-4 rounded-2xl p-6 bg-[#0d1114] border border-gray-800 shadow-2xl">
+                <div class="flex flex-row items-stretch mb-4">
+                    <a
+                        href="{{ backdropExperienceItem?.websiteUrl }}"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <img
+                            src="{{ backdropExperienceItem?.companyLogoUrl }}"
+                            alt="{{ backdropExperienceItem?.company }} Logo"
+                            class="h-12 w-12 object-contain mr-4" />
+                    </a>
+                    <button
+                        class="modal-close ml-auto block text-gray-400 p-2 cursor-pointer text-3xl font-bold hover:text-white transition-colors"
+                        data-modal-close
+                        (click)="closeModal()">
+                        &times;
+                    </button>
+                </div>
+                <h4 class="text-xl font-bold text-white">
+                    {{ backdropExperienceItem?.role }} —
+                    <a
+                        href="{{ backdropExperienceItem?.websiteUrl }}"
+                        class="text-teal-400 hover:underline">
+                        {{ backdropExperienceItem?.company }}
+                    </a>
+                </h4>
+                <p class="text-sm text-gray-400 mt-2">
+                    {{ backdropExperienceItem?.startDate | date: 'MMM yyyy' }} —
+                    {{
+                        backdropExperienceItem?.endDate === 'Present'
+                            ? 'Present'
+                            : (backdropExperienceItem?.endDate | date: 'MMM yyyy')
+                    }}
+                </p>
+                <hr class="my-4 border-gray-800" />
+                <div class="text-gray-300">
+                    <ul class="list-disc list-inside space-y-2">
+                        @for (
+                            responsibility of backdropExperienceItem?.responsibilities;
+                            track $index
+                        ) {
+                            <li class="">{{ responsibility }}</li>
+                        }
+                    </ul>
+                </div>
+                <hr class="my-4 border-gray-800" />
+
+                <div class="mt-4">
+                    <h5 class="text-sm font-semibold text-blue-400 mb-2">Technologies Used:</h5>
+                    <p class="text-gray-400">
+                        {{ backdropExperienceItem?.technologies?.join(' · ') }}
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+}

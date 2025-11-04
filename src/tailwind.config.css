@@ -17,10 +17,6 @@
     --color-mulberry: #55344d;
 
     --font-geist: 'Geist', sans-serif;
-
-    /* Screens */
-    --screen-sm: 640px;
-    --screen-md: 768px;
 }
 
 @keyframes fade-in-up-bounce {

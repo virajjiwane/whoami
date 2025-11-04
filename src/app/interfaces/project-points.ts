@@ -1,5 +1,5 @@
-export interface ProjectPoints {
+export interface iProjectPoints {
     title: string;
     points: string[];
-    titleColorHex: string;
+    titleColor: string;
 }
