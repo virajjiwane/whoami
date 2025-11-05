@@ -1,0 +1,71 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Portfolio architecture (Angular 20 · EmailJS · Render CI/CD)" width="100%" height="100%">
+  <!-- Frontend (Angular 20) -->
+  <g style="filter:drop-shadow(0 6px 18px rgba(2,6,23,0.45));">
+    <rect x="240" y="40" width="420" height="80" rx="6"
+      style="fill:rgba(59,130,246,0.12);stroke:#3B82F6;stroke-width:1;" />
+    <text x="450" y="70" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:12px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;font-weight:600;">
+      Frontend — Angular 20
+    </text>
+    <text x="450" y="90" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:11px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;font-weight:300;">
+      Standalone components · Signals · TypeScript · TailwindCSS
+    </text>
+  </g>
+
+  <!-- EmailJS (Serverless Contact) -->
+  <g style="filter:drop-shadow(0 6px 18px rgba(2,6,23,0.45));">
+    <rect x="240" y="140" width="420" height="80" rx="6"
+      style="fill:rgba(20,184,166,0.08);stroke:#14B8A6;stroke-width:1;" />
+    <text x="450" y="170" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:12px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;">
+      EmailJS (Serverless Integration)
+    </text>
+    <text x="450" y="190" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:11px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;font-weight:300;">
+      Contact form API · Validation · Spam Protection
+    </text>
+  </g>
+
+  <!-- Pre-rendered / Static Assets -->
+  <g style="filter:drop-shadow(0 6px 18px rgba(2,6,23,0.45));">
+    <rect x="240" y="240" width="420" height="80" rx="6"
+      style="fill:rgba(239,68,68,0.2);stroke:#EF4444;stroke-width:1;" />
+    <text x="450" y="270" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:12px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;">
+      Pre-rendered Routes &amp; Static Assets
+    </text>
+    <text x="450" y="290" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:11px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;font-weight:300;">
+      SSR/SSG · Lazy Images · Optimized Bundles
+    </text>
+  </g>
+
+  <!-- GitHub Actions (CI) -->
+  <g style="filter:drop-shadow(0 6px 18px rgba(2,6,23,0.45));">
+    <rect x="240" y="340" width="420" height="80" rx="6"
+      style="fill:rgba(168,85,247,0.12);stroke:#A855F7;stroke-width:1;" />
+    <text x="450" y="370" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:12px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;">
+      GitHub Actions — Continuous Integration
+    </text>
+    <text x="450" y="390" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:11px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;font-weight:300;">
+      Lint · Test · Build · Prerender Automation
+    </text>
+  </g>
+
+  <!-- Render (Hosting & CDN) -->
+  <g style="filter:drop-shadow(0 6px 18px rgba(2,6,23,0.45));">
+    <rect x="240" y="440" width="420" height="80" rx="6"
+      style="fill:rgba(59,130,246,0.12);stroke:#3B82F6;stroke-width:1;" />
+    <text x="450" y="470" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:12px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;">
+      Render Hosting + CDN Infrastructure
+    </text>
+    <text x="450" y="490" text-anchor="middle"
+      style="fill:#9CA3AF;font-size:11px;font-family:Roboto,system-ui,-apple-system,'Segoe UI',Arial;font-weight:300;">
+      Auto-Deploy from GitHub · Edge Caching · Global Delivery
+    </text>
+  </g>
+</svg>

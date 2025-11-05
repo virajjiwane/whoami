@@ -16,7 +16,7 @@ export class MyWork implements OnInit {
     protected displayedProjects: string[] = [];
     constructor(
         protected animationService: AnimationService,
-        protected dataService: DataService,
+        private dataService: DataService,
     ) {}
 
     ngOnInit(): void {

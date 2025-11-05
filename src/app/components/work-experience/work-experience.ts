@@ -19,7 +19,7 @@ export class WorkExperience implements OnInit {
 
     constructor(
         protected animationService: AnimationService,
-        protected dataService: DataService,
+        private dataService: DataService,
     ) {}
 
     ngOnInit() {

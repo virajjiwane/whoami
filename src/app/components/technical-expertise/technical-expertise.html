@@ -1,4 +1,6 @@
 <!-- Technical Expertise -->
+ <!--This div is used to enforce generation of below classes as text interpolation is runtime and tailwindcss classes are buildtime  -->
+<div class="from-blue-500 from-green-500 from-purple-500 from-red-500 from-yellow-500 to-blue-700 to-green-700 to-purple-700 to-red-700 to-yellow-700"></div>
 <section class="py-12 sm:py-20 px-4 bg-[#161B22]">
     <div
         class="max-w-6xl mx-auto opacity-0"
@@ -25,11 +27,7 @@
                                 </div>
                                 <div class="h-2 bg-[#30363D] rounded-full overflow-hidden">
                                     <div
-                                        class="h-full bg-linear-to-r from-{{
-                                            skillGroup.color
-                                        }}-500 to-{{
-                                            skillGroup.color
-                                        }}-700 animate-expand origin-left"
+                                        class="h-full bg-linear-to-r from-{{skillGroup.color}}-500 to-{{skillGroup.color}}-700  animate-expand origin-left"
                                         [ngStyle]="{ width: skill.level + '%' }"></div>
                                 </div>
                             </div>

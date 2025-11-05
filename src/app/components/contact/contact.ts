@@ -34,7 +34,7 @@ export class Contact implements OnInit {
     );
     constructor(
         protected animationService: AnimationService,
-        protected dataService: DataService,
+        private dataService: DataService,
         private sanitizer: DomSanitizer,
     ) {}
 

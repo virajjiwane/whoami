@@ -17,7 +17,7 @@ export class TechnicalExpertise implements OnInit {
     protected coreSkills: string[] = [];
     constructor(
         protected animationService: AnimationService,
-        protected dataService: DataService,
+        private dataService: DataService,
     ) {}
 
     ngOnInit(): void {

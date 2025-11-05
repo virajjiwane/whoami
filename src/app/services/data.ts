@@ -210,7 +210,7 @@ export const DATA: iData = {
             description:
                 'Scalable analytics pipeline for org-culture insights. Processed large corp datasets and produced GDPR-safe dashboards used by 5k+ C-Suite executives across multiple organizations.',
             architecture: '/assets/architecture/arch-culture.svg',
-            projectUrl: 'https://virajjiwane.onrender.com/case-studies/culture-analytics',
+            isConfidential: true,
             frontEndPoints: {
                 title: 'Frontend & UX',
                 points: [
@@ -246,7 +246,7 @@ export const DATA: iData = {
             description:
                 'Led microservices redesign for loan disbursal and underwriting. Focus on reliability, idempotency and automation for high-volume disbursal workflows.',
             architecture: '/assets/architecture/arch-lending.svg',
-            projectUrl: 'https://virajjiwane.onrender.com/case-studies/lending-platform',
+            isConfidential: true,
             frontEndPoints: {
                 title: 'Frontend',
                 points: [
@@ -280,7 +280,8 @@ export const DATA: iData = {
             description:
                 'ML + IoT system for wax-deposition prediction on pipelines. Won hackathon and granted patent in 2024. Includes sensor integration and predictive dashboard.',
             architecture: '/assets/architecture/arch-sili.svg',
-            projectUrl: 'https://github.com/virajjiwane/sili-tool',
+            projectUrl: 'https://github.com/virajjiwane/sili',
+            isConfidential: true,
             frontEndPoints: {
                 title: 'Hardware & Edge',
                 points: ['Arduino sensor network', 'Edge preprocessing', 'Low-power telemetry'],
@@ -301,6 +302,48 @@ export const DATA: iData = {
                     'Patent granted (2024)',
                     'Hackathon winner and IEEE recognition',
                     'Significant predicted OPEX reduction for pilot customers',
+                ],
+                titleColor: 'teal',
+            },
+        },
+        whoAmI: {
+            name: 'Personal Portfolio Website — virajjiwane.onrender.com',
+            description:
+                'Modern developer portfolio built with Angular 20, TypeScript, and TailwindCSS. Showcases projects, achievements, and experience through a dark, cinematic design with smooth animations, modular data-driven components, and EmailJS-powered contact workflow.',
+            architecture: '/assets/architecture/arch-portfolio.svg',
+            projectUrl: 'https://github.com/virajjiwane/whoami',
+            isConfidential: false,
+            frontEndPoints: {
+                title: 'Frontend',
+                points: [
+                    'Angular 20 standalone component architecture',
+                    'TypeScript with strict type safety and signals for reactivity',
+                    'TailwindCSS design system with custom animations and gradients',
+                    'IntersectionObserver-triggered transitions for scroll reveal',
+                    'Dynamic routing for project details and timeline modules',
+                    'Responsive, mobile-first layout with optimized rendering pipeline',
+                ],
+                titleColor: 'blue',
+            },
+            backEndPoints: {
+                title: 'Deployment & Integrations',
+                points: [
+                    'EmailJS integration for serverless contact form submissions',
+                    'Client-side validation and anti-spam workflow using EmailJS templates',
+                    'CI/CD pipeline on Render with GitHub Actions for automated deployments',
+                    'Pre-rendered static routes for SEO and performance boost',
+                    'Structured metadata and OpenGraph tags for social preview optimization',
+                ],
+                titleColor: 'purple',
+            },
+            achievements: {
+                title: 'Key Achievements',
+                points: [
+                    'Live production portfolio at virajjiwane.onrender.com',
+                    '95+ Lighthouse scores across performance, accessibility, and best practices',
+                    'Serverless EmailJS workflow with 99.99% form delivery reliability',
+                    'Clean, modular Angular 20 architecture supporting rapid iteration',
+                    'Deployed with zero-downtime CI/CD pipeline on Render',
                 ],
                 titleColor: 'teal',
             },

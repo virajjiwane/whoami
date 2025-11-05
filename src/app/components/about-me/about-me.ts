@@ -15,7 +15,7 @@ export class AboutMe implements OnInit {
     protected aboutMe$: iAboutMe | null = null;
     constructor(
         protected animationService: AnimationService,
-        protected dataService: DataService,
+        private dataService: DataService,
     ) {}
 
     ngOnInit() {
