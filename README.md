@@ -39,6 +39,25 @@ ng serve
 
 Then open http://localhost:4200 in your browser.
 
+# 🧠 Customization
+
+All personal data such as name, bio, experience, and projects are stored in:
+
+`src/app/services/data.ts`
+
+
+To customize it for your own portfolio:
+
+Open the file above.
+
+Replace my details with your own information.
+
+Update project links, social profiles, and descriptions.
+
+Save and redeploy.
+
+You can fork this repository and make it completely yours.
+
 # ❤️ Show Love
 If you liked the project:
 
