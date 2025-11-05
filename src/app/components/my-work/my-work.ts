@@ -3,10 +3,11 @@ import { IntersectionDirective } from '../../directives/intersection';
 import { AnimationService } from '../../services/animation';
 import { DataService } from '../../services/data-service';
 import { iProject } from '../../interfaces/project';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-my-work',
-    imports: [IntersectionDirective],
+    imports: [IntersectionDirective, RouterLink],
     templateUrl: './my-work.html',
     styleUrl: './my-work.scss',
     standalone: true,
