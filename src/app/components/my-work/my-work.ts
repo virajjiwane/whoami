@@ -11,10 +11,13 @@ import { iProject } from '../../interfaces/project';
     styleUrl: './my-work.scss',
     standalone: true,
 })
-export class MyWork implements OnInit{
+export class MyWork implements OnInit {
     protected projects: { [key: string]: iProject } | null = null;
     protected displayedProjects: string[] = [];
-    constructor(protected animationService: AnimationService, protected dataService: DataService) {}
+    constructor(
+        protected animationService: AnimationService,
+        protected dataService: DataService,
+    ) {}
 
     ngOnInit(): void {
         this.projects = this.dataService.data.projects;

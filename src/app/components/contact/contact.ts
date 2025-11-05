@@ -1,7 +1,11 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 import { AnimationService } from '../../services/animation';
+import { DataService } from '../../services/data-service';
+import { iContact } from '../../interfaces/contact';
 @Component({
     selector: 'app-contact',
     imports: [ReactiveFormsModule],
@@ -9,7 +13,13 @@ import { AnimationService } from '../../services/animation';
     styleUrl: './contact.scss',
     standalone: true,
 })
-export class Contact {
+export class Contact implements OnInit {
+    protected contact: iContact | null = null;
+    protected safeHTMLLinks: {
+        label: string;
+        url: string;
+        iconSVG: SafeHtml;
+    }[] = [];
     emailSent = signal(false);
     emailForm = new FormGroup(
         {
@@ -22,7 +32,19 @@ export class Contact {
             updateOn: 'change',
         },
     );
-    constructor(protected animationService: AnimationService) {}
+    constructor(
+        protected animationService: AnimationService,
+        protected dataService: DataService,
+        private sanitizer: DomSanitizer,
+    ) {}
+
+    ngOnInit(): void {
+        this.contact = this.dataService.data.contact;
+        this.safeHTMLLinks = this.contact.links.map((l) => ({
+            ...l,
+            iconSVG: this.sanitizer.bypassSecurityTrustHtml(l.iconSVG),
+        }));
+    }
 
     sendEmail() {
         emailjs
@@ -44,7 +66,7 @@ export class Contact {
                 (error) => {
                     // Display toast notification for failure
                     alert(
-                        'Failed to send the message. I probably ran out of credits to send mails. Please contact me directly at vjiwane27@gmail.com.',
+                        `Failed to send the message. I probably ran out of credits to send mails. Please contact me directly at ${this.contact?.email} or ${this.contact?.phone}.`,
                     );
                 },
             );

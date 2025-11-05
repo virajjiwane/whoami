@@ -1,84 +1,107 @@
 <!-- Projects -->
- @if (projects) {
-<section id="work" class="py-12 sm:py-20 px-4 bg-[#161B22]">
-    <div class="max-w-6xl mx-auto">
-        <h2
-            class="text-3xl font-bold mb-16 text-center opacity-0"
-            [appIntersection]
-            (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
-            My Work
-        </h2>
-
-        <div class="space-y-16">
-
-            @for (projectKey of displayedProjects; track $index) {
-                @let project = projects[projectKey];
-
-                @if (project) {
-                    <div
-                class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0"
+@if (projects) {
+    <section id="work" class="py-12 sm:py-20 px-4 bg-[#161B22]">
+        <div class="max-w-6xl mx-auto">
+            <h2
+                class="text-3xl font-bold mb-16 text-center opacity-0"
                 [appIntersection]
                 (viewChange)="animationService.handleViewChange($event, 'animate-fade-in-up')">
-                <div class="p-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div class="space-y-6">
-                            <div>
-                                <h3 class="text-2xl font-bold mb-4">
-                                    {{project.name}}
-                                </h3>
-                                <p class="text-gray-400">
-                                    {{project.description}}
-                                </p>
-                            </div>
+                My Work
+            </h2>
 
-                            <div class="grid grid-cols-2 gap-6">
-                                <div>
-                                    <h4 class="text-sm font-semibold text-{{project.frontEndPoints.titleColor}}-400 mb-3">
-                                        {{project.frontEndPoints.title}}
-                                    </h4>
-                                    <ul class="space-y-2 text-sm text-gray-400 list-disc">
-                                        @for (point of project.frontEndPoints.points; track $index) {
-                                            <li>{{point}}</li>
-                                        }
-                                    </ul>
+            <div class="space-y-16">
+                @for (projectKey of displayedProjects; track $index) {
+                    @let project = projects[projectKey];
+
+                    @if (project) {
+                        <div
+                            class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0"
+                            [appIntersection]
+                            (viewChange)="
+                                animationService.handleViewChange($event, 'animate-fade-in-up')
+                            ">
+                            <div class="p-8">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    <div class="space-y-6">
+                                        <div>
+                                            <h3 class="text-2xl font-bold mb-4">
+                                                {{ project.name }}
+                                            </h3>
+                                            <p class="text-gray-400">
+                                                {{ project.description }}
+                                            </p>
+                                        </div>
+
+                                        <div class="grid grid-cols-2 gap-6">
+                                            <div>
+                                                <h4
+                                                    class="text-sm font-semibold text-{{
+                                                        project.frontEndPoints.titleColor
+                                                    }}-400 mb-3">
+                                                    {{ project.frontEndPoints.title }}
+                                                </h4>
+                                                <ul
+                                                    class="space-y-2 text-sm text-gray-400 list-disc">
+                                                    @for (
+                                                        point of project.frontEndPoints.points;
+                                                        track $index
+                                                    ) {
+                                                        <li>{{ point }}</li>
+                                                    }
+                                                </ul>
+                                            </div>
+
+                                            <div>
+                                                <h4
+                                                    class="text-sm font-semibold text-{{
+                                                        project.backEndPoints.titleColor
+                                                    }}-400 mb-3">
+                                                    {{ project.backEndPoints.title }}
+                                                </h4>
+                                                <ul
+                                                    class="space-y-2 text-sm text-gray-400 list-disc">
+                                                    @for (
+                                                        point of project.backEndPoints.points;
+                                                        track $index
+                                                    ) {
+                                                        <li>{{ point }}</li>
+                                                    }
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-3">
+                                            <h4
+                                                class="text-sm font-semibold text-{{
+                                                    project.achievements.titleColor
+                                                }}-400">
+                                                {{ project.achievements.title }}
+                                            </h4>
+                                            <ul class="space-y-2 text-sm text-gray-400 list-disc">
+                                                @for (
+                                                    point of project.achievements.points;
+                                                    track $index
+                                                ) {
+                                                    <li>{{ point }}</li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-black/30 rounded-xl p-6">
+                                        <h4 class="text-sm font-semibold text-gray-400 mb-4">
+                                            System Architecture
+                                        </h4>
+                                        <div class="aspect-4/3 bg-black/50 rounded-lg p-4">
+                                            <img src="{{ project.architecture }}" />
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div>
-                                    <h4 class="text-sm font-semibold text-{{project.backEndPoints.titleColor}}-400 mb-3">
-                                        {{project.backEndPoints.title}}
-                                    </h4>
-                                    <ul class="space-y-2 text-sm text-gray-400 list-disc">
-                                        @for (point of project.backEndPoints.points; track $index) {
-                                            <li>{{point}}</li>
-                                        }
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="space-y-3">
-                                <h4 class="text-sm font-semibold text-{{project.achievements.titleColor}}-400">
-                                    {{project.achievements.title}}
-                                </h4>
-                                <ul class="space-y-2 text-sm text-gray-400 list-disc">
-                                    @for (point of project.achievements.points; track $index) {
-                                            <li>{{point}}</li>
-                                        }
-                                </ul>
                             </div>
                         </div>
-
-                        <div class="bg-black/30 rounded-xl p-6">
-                            <h4 class="text-sm font-semibold text-gray-400 mb-4">System Architecture</h4>
-                            <div class="aspect-4/3 bg-black/50 rounded-lg p-4">
-                                <img src="{{project.architecture}}"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    }
                 }
-            }
+            </div>
         </div>
-    </div>
-</section>
- }
+    </section>
+}
