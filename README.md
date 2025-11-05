@@ -1,59 +1,70 @@
-# Whoami
+# 🧭 Viraj Jiwane — Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.1.
+**Live:** [https://virajjiwane.onrender.com](https://virajjiwane.onrender.com)  
+**Source:** [https://github.com/virajjiwane/whoami](https://github.com/virajjiwane/whoami)
 
-## Development server
+After weeks of design, refinement, and countless commits — this portfolio is finally live.  
+Built entirely from scratch with **Angular 20**, **Tailwind CSS**, and **EmailJS**, it reflects my personal development philosophy: **clarity, precision, and discipline**.
 
-To start a local development server, run:
+---
+
+## 🚀 Tech Stack
+
+- **Framework:** Angular 20  
+- **Styling:** Tailwind CSS  
+- **Email Integration:** EmailJS  
+- **Deployment:** Render (static hosting)  
+- **Design:** Responsive, dark, minimalist  
+
+---
+
+## 🧩 Features
+
+- Dynamic sections for projects, skills, and contact  
+- Responsive layout for all screen sizes  
+- Contact form powered by EmailJS  
+- SEO meta tags for clean sharing previews  
+- Modular Angular architecture  
+
+---
+
+## 🛠️ Run Locally
 
 ```bash
+git clone https://github.com/virajjiwane/whoami.git
+cd whoami
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Then open http://localhost:4200 in your browser.
 
-## Code scaffolding
+# ❤️ Show Love
+If you liked the project:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+⭐ Star this repo to support it
 
-```bash
-ng generate component component-name
-```
+🗣️ Share it with your network
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+🧠 Fork it to build your version (credit appreciated)
 
-```bash
-ng generate --help
-```
+💬 Drop feedback under Issues
 
-## Building
+Every star, share, or comment helps me keep shipping cool things.
 
-To build the project run:
+# 📷 Preview
+![Preview](src/assets/images/preview.png)
 
-```bash
-ng build
-```
+# 🧠 About
+This portfolio blends aesthetics, performance, and modular design.
+Built over weeks of focused work — nothing rushed, nothing wasted.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+# 📬 Contact
+## Viraj Jiwane
+- 📧 [Email](mailto:vjiwane27@gmail.com)
+- 🌐 [Portfolio](virajjiwane.onrender.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/viraj-jiwane-33aa2b126/)
+- 🐙 [GitHub](https://github.com/virajjiwane/)
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🪪 License
+This project is released under the MIT License.
