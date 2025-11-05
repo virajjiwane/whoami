@@ -9,7 +9,7 @@ import { iProject } from '../../interfaces/project';
     templateUrl: './project-detail.html',
     styleUrl: './project-detail.scss',
 })
-export class ProjectDetail implements OnInit {
+export class ProjectDetail {
     private projectId = signal('');
     private activatedRoute = inject(ActivatedRoute);
     protected project = signal<iProject | null>(null);
@@ -17,12 +17,9 @@ export class ProjectDetail implements OnInit {
     constructor(private dataService: DataService) {
         this.activatedRoute.params.subscribe((params) => {
             this.projectId.set(params['id']);
-        });
-    }
-
-    ngOnInit(): void {
-        if (this.projectId()) {
+            console.log(this.projectId());
             this.project.set(this.dataService.data.projects[this.projectId()]);
-        }
+            
+        });
     }
 }
