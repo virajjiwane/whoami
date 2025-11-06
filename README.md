@@ -132,4 +132,3 @@ Add these classes to the **safelist file** `safelist.txt`.
 ## 🪪 License
 
 This project is released under the **MIT License**.
-
