@@ -10,13 +10,13 @@ export const routes: Routes = [
         title: 'Home Page',
     },
     {
-        path: 'my-work/:id',
-        component: ProjectDetail,
-        title: 'Project Detail',
-    },
-    {
         path: 'my-work',
         component: Projects,
         title: 'My Work',
+    },
+    {
+        path: 'my-work/:id',
+        component: ProjectDetail,
+        title: 'Project Detail',
     },
 ];
