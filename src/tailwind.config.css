@@ -19,6 +19,8 @@
     --font-geist: 'Geist', sans-serif;
 }
 
+@source 'safelist.txt';
+
 @keyframes fade-in-up-bounce {
     0% {
         opacity: 0;

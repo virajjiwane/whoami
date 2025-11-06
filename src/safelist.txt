@@ -1,0 +1,15 @@
+text-blue-400 
+text-purple-400 
+text-teal-400
+
+from-blue-500 
+from-green-500 
+from-purple-500 
+from-red-500 
+from-yellow-500 
+
+to-blue-700 
+to-green-700 
+to-purple-700 
+to-red-700 
+to-yellow-700
