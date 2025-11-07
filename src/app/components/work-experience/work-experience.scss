@@ -22,7 +22,7 @@
     padding: 24px 12px;
 }
 
-/* items take half width and align on either side */
+/* items take half width and align on either side (desktop) */
 .timeline-item {
     @apply relative w-1/2 px-6 py-3 cursor-pointer;
     outline: none;
@@ -54,8 +54,14 @@
 .timeline-card-top {
     @apply flex items-baseline justify-between gap-3;
 }
+
+/* date: allow wrapping and prevent overflow */
 .timeline-card .date {
     @apply text-sm text-gray-400;
+    white-space: normal;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.1;
 }
 
 /* year dot badge — positioned on spine center */
@@ -70,10 +76,11 @@
     border: 1px solid rgba(255, 255, 255, 0.03);
     box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
     transform: translateX(-50%) translateY(-50%);
-    top: calc(var(--year-top, 0px)); /* fallback to manual placement if needed */
+    top: calc(var(--year-top, 0px)); /* fallback */
 }
 
 /* ensure left / right badges don't overlap card — shift them horizontally */
+/* (these rules assume a pseudo element, keep safe) */
 .timeline-item.left::before {
     @apply -translate-x-[50%];
     left: calc(50% - 1.5rem);
@@ -83,20 +90,75 @@
     left: calc(50% + 1.5rem);
 }
 
-/* responsive — stack on small screens */
-@media (sm) {
-    .timeline-item {
-        @apply w-full left-0 px-4;
-    }
-    .timeline-item.right {
-        @apply left-0;
-    }
-    .timeline-item::before {
-        left: 28px;
-        transform: translateY(-50%);
-    }
+/* -------------------------
+   Mobile / small-screen rules
+   - hide spine
+   - single-column centered cards
+   - stack title + date
+   - center date-badge above each card
+   ------------------------- */
+@media (max-width: 640px) {
+    /* hide the vertical spine on mobile */
     .timeline::after {
-        left: 24px;
+        display: none !important;
+        content: none !important;
+    }
+
+    /* make timeline single-column and remove left/right offsets */
+    .timeline {
+        @apply px-4;
+    }
+
+    .timeline-container {
+        padding: 0;
+    }
+
+    .timeline-item {
+        @apply w-full left-0 px-0 py-3;
+        margin: 0 auto;
+        transform: none !important;
+        position: relative !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    /* neutralize left/right specific offsets */
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0 !important;
+        @apply pl-0 pr-0;
+    }
+
+    /* ensure card is full-width and centered inside the item */
+    .timeline-card {
+        @apply w-full max-w-full rounded-xl p-4;
+        margin: 0.5rem 0;
+    }
+
+    /* stack title and date vertically on small screens */
+    .timeline-card-top {
+        @apply flex flex-col items-start gap-2;
+    }
+
+    /* smaller, wrapped date */
+    .timeline-card .date {
+        @apply text-xs text-gray-400;
+        white-space: normal;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        line-height: 1.2;
+    }
+
+    /* move the year badge above the card and center it */
+    .timeline-item .date-badge {
+        position: absolute !important;
+    }
+
+    /* remove any pseudo-element offsets that may interfere on mobile */
+    .timeline-item::before,
+    .timeline-item::after {
+        display: none !important;
+        content: none !important;
     }
 }
 

@@ -348,6 +348,44 @@ export const DATA: iData = {
                 titleColor: 'teal',
             },
         },
+        reviewMe: {
+            name: 'Review ME | Review, Testimonial & Feedback Analytics',
+            description:
+                'Work-in-progress NLP analytics platform to collect, analyze, and visualize user reviews, testimonials, and feedback. Designed to surface sentiment, recurring themes, and actionable insights using modern NLP techniques and scalable cloud infrastructure.',
+            architecture: '/assets/architecture/arch-reviewme.svg',
+            isConfidential: false,
+            frontEndPoints: {
+                title: 'Frontend & UX',
+                points: [
+                    'Angular dashboard with dynamic sentiment and trend visualizations',
+                    'Responsive, mobile-first UI built with Tailwind CSS',
+                    'Interactive filters by sentiment, platform, and category',
+                    'Modular charts and exportable reports (CSV / PDF)',
+                ],
+                titleColor: 'blue',
+            },
+            backEndPoints: {
+                title: 'Backend & NLP Engine',
+                points: [
+                    'Django REST Framework backend',
+                    'NLTK + Sentence Transformers for sentiment & semantic analysis',
+                    'Celery + Redis for asynchronous job processing',
+                    'AWS EC2 for compute, S3 for storage',
+                    'GitHub + GitHub Actions for CI/CD and deployments',
+                ],
+                titleColor: 'purple',
+            },
+            achievements: {
+                title: 'Progress & Highlights',
+                points: [
+                    'End-to-end prototype deployed on AWS EC2 for experimentation',
+                    'Integrated asynchronous NLP processing with Celery workers',
+                    'Automated CI/CD using GitHub Actions',
+                    'Ongoing work on clustering feedback and improving model accuracy',
+                ],
+                titleColor: 'teal',
+            },
+        },
     },
 
     displayedProjects: ['cultureAnalytics', 'lendingPlatform', 'siliTool'],

@@ -1,6 +1,6 @@
 <!-- Projects -->
- <!-- Initialize tailwind classes as they are generated at build time and text interpolation is done runtime -->
- <!-- <div class="text-blue-400 text-purple-400 text-teal-400"></div> -->
+<!-- Initialize tailwind classes as they are generated at build time and text interpolation is done runtime -->
+<!-- <div class="text-blue-400 text-purple-400 text-teal-400"></div> -->
 @if (projects) {
     <section id="work" class="py-12 sm:py-20 px-4 bg-[#161B22]">
         <div class="max-w-6xl mx-auto">
@@ -17,8 +17,9 @@
 
                     @if (project) {
                         <div
-                            class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0"
+                            class="bg-gray-900/50 rounded-xl overflow-hidden border border-gray-800 opacity-0 transform hover:scale-[1.02] transition-all hover:cursor-pointer"
                             [appIntersection]
+                            [routerLink]="`my-work/${projectKey}`"
                             (viewChange)="
                                 animationService.handleViewChange($event, 'animate-fade-in-up')
                             ">

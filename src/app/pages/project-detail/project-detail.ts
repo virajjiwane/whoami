@@ -19,7 +19,6 @@ export class ProjectDetail {
             this.projectId.set(params['id']);
             console.log(this.projectId());
             this.project.set(this.dataService.data.projects[this.projectId()]);
-            
         });
     }
 }

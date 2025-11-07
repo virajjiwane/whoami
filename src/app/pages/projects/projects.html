@@ -46,7 +46,7 @@
 
                 <div class="project-card group">
                     <a
-                        href="my-work/{{ projectKey }}"
+                        [routerLink]="`${projectKey}`"
                         class="block bg-[#161B22] border border-gray-800 rounded-xl p-6 opacity-0"
                         [appIntersection]="{
                             root: null,
