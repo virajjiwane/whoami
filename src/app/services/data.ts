@@ -386,6 +386,49 @@ export const DATA: iData = {
                 titleColor: 'teal',
             },
         },
+        phii: {
+            name: 'Phii — Gemini-Powered Alarm App',
+            description:
+                'Modern Flutter-based alarm app with AI-powered voice commands, grouped alarms, and smooth animations. Features natural language processing via Gemini AI for intuitive voice control, profile-based alarm organization, and a beautiful Material 3 design with full dark mode support.',
+            architecture: '/assets/architecture/arch-phii.svg',
+            projectUrl: 'https://github.com/virajjiwane/phii',
+            isConfidential: false,
+            frontEndPoints: {
+                title: 'Mobile App & UX',
+                points: [
+                    'Flutter cross-platform mobile app with Material 3 design',
+                    'Smooth animations and modern UI with dark mode support',
+                    'Voice command interface with speech-to-text integration',
+                    'Profile-based alarm grouping (work, weekend, gym, etc.)',
+                    'Interactive alarm management with instant ring testing',
+                    'Text-to-speech audio feedback for voice commands',
+                ],
+                titleColor: 'blue',
+            },
+            backEndPoints: {
+                title: 'Services & AI Integration',
+                points: [
+                    'Gemini AI for natural language command parsing',
+                    'Hive local database for fast alarm and profile storage',
+                    'Speech recognition service with real-time processing',
+                    'Alarm scheduling service with notification system',
+                    'Clean architecture with service layer separation',
+                    'Permission handling for alarms, notifications, and microphone',
+                ],
+                titleColor: 'purple',
+            },
+            achievements: {
+                title: 'Key Features & Highlights',
+                points: [
+                    'AI-powered voice commands: "Set alarm for 7 AM", "Wake me up in 30 minutes"',
+                    'Flexible scheduling with specific times or duration-based alarms',
+                    'Published on GitHub Pages with demo video and full documentation',
+                    'Android APK available for download with iOS version in development',
+                    'Open source MIT license with comprehensive architecture documentation',
+                ],
+                titleColor: 'teal',
+            },
+        },
     },
 
     displayedProjects: ['cultureAnalytics', 'lendingPlatform', 'siliTool'],
