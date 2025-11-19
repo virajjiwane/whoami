@@ -386,6 +386,50 @@ export const DATA: iData = {
                 titleColor: 'teal',
             },
         },
+        phii: {
+            name: 'Phii — AI-Powered Alarm App',
+            description:
+                'Smart alarm management app powered by Gemini AI with natural language processing, voice commands, and profile-based organization. Features AI-generated alarm names, speech-to-text integration, and future computer vision-based dismissal for ensuring wake-up reliability.',
+            architecture: '/assets/architecture/arch-phii.svg',
+            projectUrl: 'https://github.com/virajjiwane/phii',
+            isConfidential: false,
+            frontEndPoints: {
+                title: 'Mobile App & UX',
+                points: [
+                    'Flutter 3.38+ with Material 3 design system',
+                    'Smooth animations and gradient-based visual polish',
+                    'Voice command interface with real-time speech recognition',
+                    'Profile-based alarm grouping (work, weekends, gym)',
+                    'Interactive time pickers and audio settings',
+                    'Responsive layouts with IntersectionObserver-based animations',
+                ],
+                titleColor: 'blue',
+            },
+            backEndPoints: {
+                title: 'AI & Backend Services',
+                points: [
+                    'Google Gemini AI for natural language command parsing',
+                    'Speech-to-text and text-to-speech integration',
+                    'Hive local database for offline-first alarm storage',
+                    'Celery-style background workers for alarm scheduling',
+                    'REST APIs and prompt engineering for AI context',
+                    'GitHub Actions CI/CD for automated APK builds',
+                ],
+                titleColor: 'purple',
+            },
+            achievements: {
+                title: 'Key Features & Highlights',
+                points: [
+                    'Natural language alarm setting: "Wake me at sunrise with ocean sounds"',
+                    'AI-generated contextual and motivational alarm names',
+                    'Profile-based organization for different routines',
+                    'Computer vision dismissal (in progress) for verified wake-up',
+                    'Open-source MIT licensed project with active development',
+                    'Live demo and screenshots available on GitHub Pages',
+                ],
+                titleColor: 'teal',
+            },
+        },
     },
 
     displayedProjects: ['cultureAnalytics', 'lendingPlatform', 'siliTool'],
