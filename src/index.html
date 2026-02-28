@@ -31,7 +31,108 @@
     </head>
     <body class="scroll-smooth">
         <app-root></app-root>
+        <!-- Floating Gradio chat trigger + container -->
+        <div id="gradio-chat-container" aria-hidden="true" style="display:none;">
+            <div id="gradio-chat-shell">
+                <button id="gradio-close-btn" aria-label="Close chat">✕</button>
+                <iframe id="gradio-iframe-embed" src="https://virajjiwane-whoami.hf.space" frameborder="0" width="100%" height="100%" aria-label="Gradio chat iframe"></iframe>
+            </div>
+        </div>
+        <button id="gradio-chat-toggle" aria-label="Open chat" title="Chat" type="button">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="currentColor"/>
+            </svg>
+        </button>
     </body>
+    <style>
+        #gradio-chat-toggle {
+            position: fixed;
+            left: 18px;
+            bottom: 18px;
+            width: 56px;
+            height: 56px;
+            border-radius: 9999px;
+            background: linear-gradient(135deg,#06b6d4,#3b82f6);
+            color: white;
+            border: none;
+            box-shadow: 0 6px 18px rgba(2,6,23,0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            cursor: pointer;
+        }
+        #gradio-chat-toggle svg { display:block }
+        #gradio-chat-container {
+            position: fixed;
+            left: 18px;
+            bottom: 86px;
+            width: min(420px, calc(100vw - 36px));
+            height: min(700px, calc(100vh - 140px));
+            z-index: 99998;
+            pointer-events: auto;
+        }
+        #gradio-chat-shell {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(2,6,23,0.35);
+            display: flex;
+            flex-direction: column;
+        }
+        #gradio-close-btn {
+            position: absolute;
+            right: 8px;
+            top: 8px;
+            z-index: 10;
+            border: none;
+            background: rgba(0,0,0,0.06);
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        iframe#gradio-iframe-embed {
+            width:100%;
+            height:100%;
+            flex:1 1 auto;
+            display:block;
+            border:0;
+        }
+        @media (max-width:520px) {
+            #gradio-chat-container { left: 12px; right:12px; width: calc(100% - 24px); bottom: 86px }
+            #gradio-chat-toggle { left: 12px; bottom: 12px }
+        }
+    </style>
+    <script>
+        (function(){
+            const toggle = document.getElementById('gradio-chat-toggle');
+            const container = document.getElementById('gradio-chat-container');
+            const closeBtn = document.getElementById('gradio-close-btn');
+            function openChat(){
+                container.style.display = 'block';
+                container.setAttribute('aria-hidden', 'false');
+                toggle.setAttribute('aria-pressed','true');
+            }
+            function closeChat(){
+                container.style.display = 'none';
+                container.setAttribute('aria-hidden', 'true');
+                toggle.setAttribute('aria-pressed','false');
+            }
+            toggle.addEventListener('click', ()=>{
+                if(window.getComputedStyle(container).display === 'none') openChat(); else closeChat();
+            });
+            closeBtn.addEventListener('click', closeChat);
+            // close when clicking outside the shell
+            document.addEventListener('click', (e)=>{
+                if(!container.contains(e.target) && !toggle.contains(e.target) && window.getComputedStyle(container).display !== 'none'){
+                    closeChat();
+                }
+            });
+        })();
+    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
